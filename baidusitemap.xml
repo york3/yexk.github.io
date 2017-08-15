@@ -4,7 +4,165 @@
 
     
   <url>
-    <loc>http://ym125.cc/2017/08/15/%E5%AF%B9%E6%AF%94Laravel5-4-%E5%92%8CThinkPHP5-%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
+    <loc>http://ym125.cc/20170815/linux-pppoe-server/</loc>
+    <lastmod>2017-08-15T08:48:11.595Z</lastmod>
+    <data>
+        <display>
+        <title>LINUX PPPoE IPv6的环境搭建</title>
+        <pubTime>2017-08-15T08:46:56.000Z</pubTime>
+        
+        <tag>pppoe server</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux" url="http://ym125.cc/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ym125.cc/20170815/linux-cenos-config/</loc>
+    <lastmod>2017-08-15T08:36:50.688Z</lastmod>
+    <data>
+        <display>
+        <title>Linux centos 配置更新yum源</title>
+        <pubTime>2017-08-15T08:33:56.000Z</pubTime>
+        
+        <tag>centos</tag>
+         
+        <tag>centos 7</tag>
+         
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://ym125.cc/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ym125.cc/20170815/css-animation/</loc>
+    <lastmod>2017-08-15T08:31:01.958Z</lastmod>
+    <data>
+        <display>
+        <title>动画效果 (Animation)</title>
+        <pubTime>2017-08-15T08:27:49.000Z</pubTime>
+        
+        <tag>animation</tag>
+         
+        <tag>css动画</tag>
+         
+         
+           
+             
+              <breadCrumb title="CSS" url="http://ym125.cc/categories/CSS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ym125.cc/20170815/gulp-get-start/</loc>
+    <lastmod>2017-08-15T08:22:20.607Z</lastmod>
+    <data>
+        <display>
+        <title>gulp - 基于流的自动化构建工具</title>
+        <pubTime>2017-08-15T08:18:42.000Z</pubTime>
+        
+        <tag>nodejs</tag>
+         
+        <tag>自动化工具</tag>
+         
+        <tag>gulp</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端框架" url="http://ym125.cc/categories/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ym125.cc/20170815/jquery-common/</loc>
+    <lastmod>2017-08-15T08:15:47.604Z</lastmod>
+    <data>
+        <display>
+        <title>jQuery常用的方法</title>
+        <pubTime>2017-08-15T08:14:27.000Z</pubTime>
+        
+        <tag>function</tag>
+         
+        <tag>jquery</tag>
+         
+         
+           
+             
+              <breadCrumb title="Javascript" url="http://ym125.cc/categories/Javascript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ym125.cc/20170815/mobile-debuger/</loc>
+    <lastmod>2017-08-15T08:13:16.201Z</lastmod>
+    <data>
+        <display>
+        <title>移动端JavaScript调试</title>
+        <pubTime>2017-08-15T08:01:37.000Z</pubTime>
+        
+        <tag>前端调试</tag>
+         
+        <tag>console</tag>
+         
+         
+           
+             
+              <breadCrumb title="Javascript" url="http://ym125.cc/categories/Javascript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ym125.cc/20170815/bower-get-start/</loc>
+    <lastmod>2017-08-15T07:50:17.255Z</lastmod>
+    <data>
+        <display>
+        <title>bower 快速入门</title>
+        <pubTime>2017-08-15T07:37:54.000Z</pubTime>
+        
+        <tag>bower</tag>
+         
+        <tag>nodejs</tag>
+         
+        <tag>自动化工具</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端框架" url="http://ym125.cc/categories/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ym125.cc/20170815/%E5%AF%B9%E6%AF%94Laravel5-4-%E5%92%8CThinkPHP5-%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
     <lastmod>2017-08-15T01:28:22.295Z</lastmod>
     <data>
         <display>
@@ -26,7 +184,7 @@
 
     
   <url>
-    <loc>http://ym125.cc/2017/08/15/css%E5%9F%BA%E6%9C%AC%E5%85%A5%E9%97%A8/</loc>
+    <loc>http://ym125.cc/20170815/css%E5%9F%BA%E6%9C%AC%E5%85%A5%E9%97%A8/</loc>
     <lastmod>2017-08-14T18:05:50.915Z</lastmod>
     <data>
         <display>
@@ -48,7 +206,7 @@
 
     
   <url>
-    <loc>http://ym125.cc/2017/08/15/PHP%E4%B8%AD%E8%8E%B7%E5%8F%96%E6%96%87%E4%BB%B6%E6%89%A9%E5%B1%95%E5%90%8D%E7%9A%84N%E7%A7%8D%E6%96%B9%E6%B3%95/</loc>
+    <loc>http://ym125.cc/20170815/PHP%E4%B8%AD%E8%8E%B7%E5%8F%96%E6%96%87%E4%BB%B6%E6%89%A9%E5%B1%95%E5%90%8D%E7%9A%84N%E7%A7%8D%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2017-08-14T17:49:28.739Z</lastmod>
     <data>
         <display>
@@ -70,7 +228,7 @@
 
     
   <url>
-    <loc>http://ym125.cc/2017/08/15/git%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A7%98%E9%92%A5%E5%88%9B%E5%BB%BA/</loc>
+    <loc>http://ym125.cc/20170815/git%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A7%98%E9%92%A5%E5%88%9B%E5%BB%BA/</loc>
     <lastmod>2017-08-14T17:47:51.783Z</lastmod>
     <data>
         <display>
