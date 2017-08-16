@@ -4,6 +4,52 @@
 
     
   <url>
+    <loc>http://ym125.cc/20170816/php-common-function/</loc>
+    <lastmod>2017-08-16T03:53:28.608Z</lastmod>
+    <data>
+        <display>
+        <title>PHP常用的函数</title>
+        <pubTime>2017-08-16T03:52:23.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>function</tag>
+         
+        <tag>common</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://ym125.cc/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ym125.cc/20170816/mysql-question/</loc>
+    <lastmod>2017-08-16T03:48:25.324Z</lastmod>
+    <data>
+        <display>
+        <title>MySQL遇到的问题</title>
+        <pubTime>2017-08-16T03:40:26.000Z</pubTime>
+        
+        <tag>mysql</tag>
+         
+        <tag>常见问题</tag>
+         
+         
+           
+             
+              <breadCrumb title="Mysql" url="http://ym125.cc/categories/Mysql/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ym125.cc/20170815/linux-pppoe-server/</loc>
     <lastmod>2017-08-15T08:48:11.595Z</lastmod>
     <data>

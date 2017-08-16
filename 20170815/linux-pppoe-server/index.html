@@ -429,13 +429,13 @@
 <blockquote>
 <p>(要是这个文件没有自己创建)</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Local</div><div class="line">ipv6 ,</div><div class="line"><span class="meta">#</span><span class="bash"> 注意ipv6后面必须要隔一个空格+逗号。去掉会拨号不成功。</span></div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Local</div><div class="line">ipv6 ,</div><div class="line"><span class="meta">#</span> 注意ipv6后面必须要隔一个空格+逗号。去掉会拨号不成功。</div></pre></td></tr></table></figure>
 <p>命令：<code>vim /etc/ppp/pppoe-server-options</code></p>
 <blockquote>
 <p>(要是这个文件没有自己创建)</p>
 </blockquote>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> PPP options <span class="keyword">for</span> the PPPoE server</span></div><div class="line"><span class="meta">#</span><span class="bash"> LIC: GPL</span></div><div class="line">require-pap</div><div class="line">require-chap</div><div class="line">login</div><div class="line">+ipv6</div><div class="line">lcp-echo-interval 10</div><div class="line">lcp-echo-failure 2</div><div class="line">logfile /var/log/pppoe.log</div></pre></td></tr></table></figure>
-<p>命令： <code>vim /etc/ppp/chap-secrets</code><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">"test" * "test" *</div><div class="line"><span class="meta">#</span><span class="bash"> <span class="string">"账号"</span> * <span class="string">"密码"</span> *</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> PPP options for the PPPoE server</div><div class="line"><span class="meta">#</span> LIC: GPL</div><div class="line">require-pap</div><div class="line">require-chap</div><div class="line">login</div><div class="line">+ipv6</div><div class="line">lcp-echo-interval 10</div><div class="line">lcp-echo-failure 2</div><div class="line">logfile /var/log/pppoe.log</div></pre></td></tr></table></figure>
+<p>命令： <code>vim /etc/ppp/chap-secrets</code><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">"test" * "test" *</div><div class="line"><span class="meta">#</span> "账号" * "密码" *</div></pre></td></tr></table></figure></p>
 <p><strong>启动pppoe命令</strong>：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pppoe-server -I enp4s0 -L 192.168.5.1 -R 192.168.5.100 -N 20</div></pre></td></tr></table></figure></p>
 <blockquote>
 <p>-l ： 后面带的是你需要用作提供pppoe上网的网卡名称。<br>-L :   接你的提供服务的地址。<br>-R： 接你提供服务的地址池的起始<br>-N:   最大可拨号数量。  </p>
@@ -446,7 +446,7 @@
 <p><code>-C</code>的c是大写</p>
 </blockquote>
 <h3 id="KEA-DHCP"><a href="#KEA-DHCP" class="headerlink" title="KEA DHCP"></a>KEA DHCP</h3><p>下载链接：<a href="https://www.isc.org/downloads/" target="_blank" rel="external">https://www.isc.org/downloads/</a><br>官方文档：<a href="ftp://ftp.isc.org/isc/kea/1.2.0/doc/kea-guide.html" target="_blank" rel="external">ftp://ftp.isc.org/isc/kea/1.2.0/doc/kea-guide.html</a>  </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> DHCPv6 configuration starts here.</span></div><div class="line">"Dhcp6":</div><div class="line">&#123;</div><div class="line">    # Add names of interfaces to listen on.</div><div class="line">    "interfaces-config": &#123;</div><div class="line">    	"interfaces": ["enp4s0","*"]</div><div class="line">    &#125;,</div><div class="line">    "option-data": [ &#123;</div><div class="line">    	"name": "dns-servers",</div><div class="line">    	"data": "2001::1, 2001::2"</div><div class="line">    &#125; ],</div><div class="line"></div><div class="line">......</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> The following list defines subnets. Uncomment to <span class="built_in">enable</span> them.</span></div><div class="line">"subnet6": [</div><div class="line">&#123;    </div><div class="line">    "subnet": "2017:db8:2::/64",</div><div class="line">    "pools": [ &#123; "pool": "2017:db8:2::1-2017:db8:2::ffff" &#125; ],</div><div class="line">    "reservations": [</div><div class="line">        &#123;</div><div class="line">            "duid": "00:03:00:01:f4:28:54:00:15:51",</div><div class="line">            "prefixes": [ "2017::/64" ]</div><div class="line">        &#125;</div><div class="line">    ],</div><div class="line">    "interface":"enp4s0"</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> DHCPv6 configuration starts here.</div><div class="line">"Dhcp6":</div><div class="line">&#123;</div><div class="line">    # Add names of interfaces to listen on.</div><div class="line">    "interfaces-config": &#123;</div><div class="line">    	"interfaces": ["enp4s0","*"]</div><div class="line">    &#125;,</div><div class="line">    "option-data": [ &#123;</div><div class="line">    	"name": "dns-servers",</div><div class="line">    	"data": "2001::1, 2001::2"</div><div class="line">    &#125; ],</div><div class="line"></div><div class="line">......</div><div class="line"></div><div class="line"><span class="meta">#</span> The following list defines subnets. Uncomment to enable them.</div><div class="line">"subnet6": [</div><div class="line">&#123;    </div><div class="line">    "subnet": "2017:db8:2::/64",</div><div class="line">    "pools": [ &#123; "pool": "2017:db8:2::1-2017:db8:2::ffff" &#125; ],</div><div class="line">    "reservations": [</div><div class="line">        &#123;</div><div class="line">            "duid": "00:03:00:01:f4:28:54:00:15:51",</div><div class="line">            "prefixes": [ "2017::/64" ]</div><div class="line">        &#125;</div><div class="line">    ],</div><div class="line">    "interface":"enp4s0"</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
 <p><strong>启动命令</strong>：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">kea-dhcp6 -c /etc/kea/kea.conf</div></pre></td></tr></table></figure></p>
 <blockquote>
 <p>（c是小写）,该进程不会后台进行。</p>
@@ -490,6 +490,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/20170816/mysql-question/" rel="prev" title="MySQL遇到的问题">
+                MySQL遇到的问题 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -572,7 +576,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -583,7 +587,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -594,7 +598,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
