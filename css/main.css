@@ -1540,12 +1540,15 @@ pre .javascript .function {
 }
 .posts-expand .post-tags {
   margin-top: 40px;
-  text-align: center;
+  text-align: left;
 }
 .posts-expand .post-tags a {
   display: inline-block;
   margin-right: 10px;
   font-size: 13px;
+  background: #f1f1f1;
+  border: #f1f1f1;
+  padding: 0 10px;
 }
 .post-nav {
   display: table;
@@ -1721,6 +1724,7 @@ pre .javascript .function {
 .site-author-image {
   display: block;
   margin: 0 auto;
+  border-radius: 50%;
   padding: 2px;
   max-width: 120px;
   height: auto;
@@ -1809,7 +1813,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c9ff1d;
+  background: #fff77d;
 }
 .links-of-blogroll {
   font-size: 13px;
