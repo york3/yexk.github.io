@@ -97,7 +97,7 @@
 <meta name="description" content="Yexk_M blog">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Yexk_M 极致分享">
-<meta property="og:url" content="http://ym125.cc/categories/Javascript/index.html">
+<meta property="og:url" content="http://ym125.cc/categories/javascript/index.html">
 <meta property="og:site_name" content="Yexk_M 极致分享">
 <meta property="og:description" content="Yexk_M blog">
 <meta property="og:locale" content="zh-Hans">
@@ -132,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://ym125.cc/categories/Javascript/"/>
+  <link rel="canonical" href="http://ym125.cc/categories/javascript/"/>
 
 
 
 
 
-  <title>分类: Javascript | Yexk_M 极致分享</title>
+  <title>分类: javascript | Yexk_M 极致分享</title>
   
 
 
@@ -312,7 +312,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h2>Javascript<small>分类</small>
+        <h2>javascript<small>分类</small>
         </h2>
       </div>
 
@@ -324,7 +324,7 @@
 
       <h3 class="post-title">
         
-            <a class="post-title-link" href="/20170815/jquery-common/" itemprop="url">
+            <a class="post-title-link" href="/20170818/jquery-common-function/" itemprop="url">
               
                 <span itemprop="name">jQuery常用的方法</span>
               
@@ -334,37 +334,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-15T16:14:27+08:00"
-              content="2017-08-15" >
-          08-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/20170815/mobile-debuger/" itemprop="url">
-              
-                <span itemprop="name">移动端JavaScript调试</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-15T16:01:37+08:00"
-              content="2017-08-15" >
-          08-15
+              datetime="2017-08-18T00:35:42+08:00"
+              content="2017-08-18" >
+          08-18
         </time>
       </div>
 
@@ -425,7 +397,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -436,7 +408,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -993,6 +965,47 @@
     });
     $(document).on('keyup', function (event) {
       var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+sSearchPopup = event.which === 27 &&
         $('.search-popup').is(':visible');
       if (shouldDismissSearchPopup) {
         onPopupClose();

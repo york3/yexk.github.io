@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="animation,css动画," />
+  <meta name="keywords" content="function,jquery,common," />
 
 
 
@@ -94,20 +94,18 @@
 
 
 
-<meta name="description" content="动画效果 (Animation) 定义一写自己喜欢的动画效果。通过 CSS3，我们能够创建动画，这可以在许多网页中取代动画图片、Flash 动画以及 JavaScript。  定义animation 属性是一个简写属性，用于设置六个动画属性：animation-name （动画名称）animation-duration （时间）animation-timing-function （速度曲线）ani">
-<meta name="keywords" content="animation,css动画">
+<meta name="description" content="个人总结一些工作中必须使用和掌握的jQuery方法。">
+<meta name="keywords" content="function,jquery,common">
 <meta property="og:type" content="article">
-<meta property="og:title" content="动画效果 (Animation)">
-<meta property="og:url" content="http://ym125.cc/20170815/css-animation/index.html">
+<meta property="og:title" content="jQuery常用的方法">
+<meta property="og:url" content="http://ym125.cc/20170818/jquery-common-function/index.html">
 <meta property="og:site_name" content="Yexk_M 极致分享">
-<meta property="og:description" content="动画效果 (Animation) 定义一写自己喜欢的动画效果。通过 CSS3，我们能够创建动画，这可以在许多网页中取代动画图片、Flash 动画以及 JavaScript。  定义animation 属性是一个简写属性，用于设置六个动画属性：animation-name （动画名称）animation-duration （时间）animation-timing-function （速度曲线）ani">
+<meta property="og:description" content="个人总结一些工作中必须使用和掌握的jQuery方法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://ym125.cc/20170815/css-animation/1_css_animate.gif">
-<meta property="og:updated_time" content="2017-08-15T08:31:01.958Z">
+<meta property="og:updated_time" content="2017-08-17T16:39:02.608Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="动画效果 (Animation)">
-<meta name="twitter:description" content="动画效果 (Animation) 定义一写自己喜欢的动画效果。通过 CSS3，我们能够创建动画，这可以在许多网页中取代动画图片、Flash 动画以及 JavaScript。  定义animation 属性是一个简写属性，用于设置六个动画属性：animation-name （动画名称）animation-duration （时间）animation-timing-function （速度曲线）ani">
-<meta name="twitter:image" content="http://ym125.cc/20170815/css-animation/1_css_animate.gif">
+<meta name="twitter:title" content="jQuery常用的方法">
+<meta name="twitter:description" content="个人总结一些工作中必须使用和掌握的jQuery方法。">
 
 
 
@@ -136,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://ym125.cc/20170815/css-animation/"/>
+  <link rel="canonical" href="http://ym125.cc/20170818/jquery-common-function/"/>
 
 
 
 
 
-  <title>动画效果 (Animation) | Yexk_M 极致分享</title>
+  <title>jQuery常用的方法 | Yexk_M 极致分享</title>
   
 
 
@@ -323,7 +321,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ym125.cc/20170815/css-animation/">
+    <link itemprop="mainEntityOfPage" href="http://ym125.cc/20170818/jquery-common-function/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yexk">
@@ -340,7 +338,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">动画效果 (Animation)</h2>
+          <h2 class="post-title" itemprop="name headline">jQuery常用的方法</h2>
         
 
         <div class="post-meta">
@@ -352,8 +350,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-15T16:27:49+08:00">
-                2017-08-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-18T00:35:42+08:00">
+                2017-08-18
               </time>
             
 
@@ -375,8 +373,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS</span>
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
                   </a>
                 </span>
 
@@ -412,251 +410,144 @@
       
 
       
-        <h1 id="动画效果-Animation"><a href="#动画效果-Animation" class="headerlink" title="动画效果 (Animation)"></a>动画效果 (Animation)</h1><blockquote>
-<p>定义一写自己喜欢的动画效果。通过 CSS3，我们能够创建动画，这可以在许多网页中取代动画图片、Flash 动画以及 JavaScript。</p>
+        <blockquote>
+<p>个人总结一些工作中必须使用和掌握的jQuery方法。</p>
 </blockquote>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>animation 属性是一个简写属性，用于设置六个动画属性：<br>animation-name （动画名称）<br>animation-duration （时间）<br>animation-timing-function （速度曲线）<br>animation-delay （延时）<br>animation-iteration-count （播放的次数）<br>animation-direction （反向播放）    </p>
 <a id="more"></a>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>animation-name</td>
-<td>规定需要绑定到选择器的 keyframe 名称。。</td>
-</tr>
-<tr>
-<td>animation-duration</td>
-<td>规定完成动画所花费的时间，以秒或毫秒计。</td>
-</tr>
-<tr>
-<td>animation-timing-function</td>
-<td>规定动画的速度曲线。</td>
-</tr>
-<tr>
-<td>animation-delay</td>
-<td>规定在动画开始之前的延迟。</td>
-</tr>
-<tr>
-<td>animation-iteration-count</td>
-<td>规定动画应该播放的次数。</td>
-</tr>
-<tr>
-<td>animation-direction</td>
-<td>规定是否应该轮流反向播放动画。</td>
-</tr>
-</tbody>
-</table>
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p><code>animation: name duration timing-function delay iteration-count direction;</code>   </p>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>name</th>
-<th>duration</th>
-<th>timing-function</th>
-<th>delay</th>
-<th>iteration-count</th>
-<th>direction</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>值</td>
-<td>keyframename</td>
-<td>time</td>
-<td>linear</td>
-<td>time</td>
-<td>n</td>
-<td>normal</td>
-</tr>
-<tr>
-<td></td>
-<td>none</td>
-<td></td>
-<td>ease</td>
-<td></td>
-<td>infinite</td>
-<td>alternate</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td>ease-in</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td>ease-out</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td>ease-in-out</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td>ease-in-out</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td>cubic-bezier(n,n,n,n)</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p><strong>简单案例</strong>：<br>css &gt;&gt;&gt;<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.circle</span>&#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">	<span class="attribute">border-radius</span>: <span class="number">50%</span>;</div><div class="line">	<span class="attribute">line-height</span>: <span class="number">100px</span>;</div><div class="line">	<span class="attribute">text-align</span>: center;</div><div class="line">	<span class="attribute">background-color</span>: <span class="number">#ccc</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.circle</span><span class="selector-pseudo">:hover</span>&#123;</div><div class="line">	<span class="comment">/* animation */</span></div><div class="line">	<span class="attribute">animation</span>: circle <span class="number">1s</span> linear infinite alternate;</div><div class="line">&#125;</div><div class="line">@<span class="keyword">keyframes</span> circle &#123;</div><div class="line">	<span class="selector-tag">from</span> &#123; <span class="attribute">box-shadow</span>: <span class="number">0px</span> <span class="number">0px</span> <span class="number">1px</span> <span class="number">#00A4C1</span>; &#125;</div><div class="line">	<span class="selector-tag">to</span> &#123; <span class="attribute">box-shadow</span>: <span class="number">0px</span> <span class="number">0px</span> <span class="number">20px</span> <span class="number">#00A4C1</span>; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>html &gt;&gt;&gt;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"circle"</span>&gt;Yexk&lt;<span class="regexp">/div&gt;</span></div></pre></td></tr></table></figure></p>
-<img src="/20170815/css-animation/1_css_animate.gif" alt="1_css_animate.gif" title="">
-<h3 id="1-name"><a href="#1-name" class="headerlink" title="1. name"></a>1. name</h3><p>为 @keyframes 动画规定名称。<br><strong>语法：</strong> <code>animation-name: keyframename|none;</code>    </p>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>keyframename</td>
-<td>规定需要绑定到选择器的 keyframe 的名称。</td>
-</tr>
-<tr>
-<td>none</td>
-<td>规定无动画效果（可用于覆盖来自级联的动画）。</td>
-</tr>
-</tbody>
-</table>
-<h3 id="2-duration"><a href="#2-duration" class="headerlink" title="2. duration"></a>2. duration</h3><p>定义动画完成一个周期所需要的时间，以秒或毫秒计。<br><strong>语法：</strong> <code>animation-duration: time;</code></p>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>time</td>
-<td>规定完成动画所花费的时间。默认值是 0，意味着没有动画效果。</td>
-</tr>
-</tbody>
-</table>
-<h3 id="3-timing-function"><a href="#3-timing-function" class="headerlink" title="3. timing-function"></a>3. timing-function</h3><p>定义动画的速度曲线。速度曲线定义动画从一套 CSS 样式变为另一套所用的时间。<br><strong>语法：</strong> <code>animation-timing-function: value;</code></p>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>linear</td>
-<td>动画从头到尾的速度是相同的。</td>
-</tr>
-<tr>
-<td>ease</td>
-<td>默认。动画以低速开始，然后加快，在结束前变慢。</td>
-</tr>
-<tr>
-<td>ease-in</td>
-<td>动画以低速开始。</td>
-</tr>
-<tr>
-<td>ease-out</td>
-<td>动画以低速结束。</td>
-</tr>
-<tr>
-<td>ease-in-out</td>
-<td>动画以低速开始和结束。</td>
-</tr>
-<tr>
-<td>cubic-bezier(n,n,n,n)</td>
-<td>在 cubic-bezier 函数中自己的值。可能的值是从 0 到 1 的数值。</td>
-</tr>
-</tbody>
-</table>
-<h3 id="4-delay"><a href="#4-delay" class="headerlink" title="4. delay"></a>4. delay</h3><p>定义动画何时开始。<br><strong>语法：</strong> <code>animation-timing-function: value;</code>  </p>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>time</td>
-<td>可选。定义动画开始前等待的时间，以秒或毫秒计。默认值是 0。</td>
-</tr>
-</tbody>
-</table>
-<h3 id="5-iteration-count"><a href="#5-iteration-count" class="headerlink" title="5. iteration-count"></a>5. iteration-count</h3><p>定义动画的播放次数。<br><strong>语法：</strong> <code>animation-iteration-count: n|infinite;</code>   </p>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>n</td>
-<td>定义动画播放次数的数值。</td>
-</tr>
-<tr>
-<td>infinite</td>
-<td>规定动画应该无限次播放。</td>
-</tr>
-</tbody>
-</table>
-<h3 id="6-direction"><a href="#6-direction" class="headerlink" title="6. direction"></a>6. direction</h3><p>定义是否应该轮流反向播放动画。如果 animation-direction 值是 “alternate”，则动画会在奇数次数（1、3、5 等等）正常播放，而在偶数次数（2、4、6 等等）向后播放。  </p>
-<p><strong>语法</strong> <code>animation-direction: normal|alternate;</code></p>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>normal</td>
-<td>默认值。动画应该正常播放。</td>
-</tr>
-<tr>
-<td>alternate</td>
-<td>动画应该轮流反向播放。</td>
-</tr>
-</tbody>
-</table>
-<p><strong>实战运用：</strong></p>
-<p>参考 animate.css</p>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><ol>
+<li><p><code>attr(name|properties|key,value|fn)</code> : 对元素属性的操作。（<code>prop()</code>）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'a'</span>).attr(<span class="string">'href'</span>); <span class="comment">// 获取a标签的href属性值。</span></div><div class="line">$(<span class="string">'a'</span>).attr(<span class="string">'href'</span>,<span class="string">'http://yexk.cn'</span>); <span class="comment">// 给a标签的一个属性赋值。</span></div><div class="line">$(<span class="string">'a'</span>).attr(&#123;<span class="string">'href'</span>:<span class="string">'http://yexk.cn'</span>,<span class="string">'title'</span>:<span class="string">'Yexk'</span>&#125;); <span class="comment">// 给a标签的多个属性赋值。</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><code>removeAttr(name)</code> : 移除元素属性。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'a'</span>).removeAttr(<span class="string">'href'</span>); <span class="comment">// 移除一个href属性</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><code>addClass(class|fn)</code> ：添加一个class（类）名。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;!-- <span class="comment">// HTML 代码: --&gt;</span></div><div class="line">&lt;div&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line">&lt;!-- <span class="comment">// jQuery 代码: --&gt;</span></div><div class="line">$(<span class="string">"div"</span>).addClass(<span class="string">'show_div'</span>);</div><div class="line">&lt;!-- <span class="comment">// 结果： --&gt;</span></div><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"show_div"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div></pre></td></tr></table></figure>
+</li>
+<li><p><code>removeClass([class|fn])</code> : 移除元素的class（类）名。<br> 和3使用方法相同，效果相反。</p>
+</li>
+<li><p><code>html([val|fn])</code> : 对元素的内容进行操作。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'div'</span>).html(<span class="string">'&lt;p&gt;我是动态追加的&lt;/p&gt;'</span>); <span class="comment">// 添加内容。</span></div><div class="line">$(<span class="string">'div'</span>).html(); <span class="comment">// 获取内容 </span></div><div class="line">$(<span class="string">'div'</span>).html(<span class="string">''</span>); <span class="comment">// 删除内容</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><code>val([val|fn])</code> ：对元素的value值进行操作。<br> 使用方法和5相同。</p>
+</li>
+</ol>
+<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><ol>
+<li>ID 选择器<ul>
+<li><code>#id</code></li>
+</ul>
+</li>
+<li>class 选择器<ul>
+<li><code>.class</code></li>
+</ul>
+</li>
+<li>属性选择器<ul>
+<li><code>[attribute]</code></li>
+<li><code>[attribute=value]</code> </li>
+</ul>
+</li>
+<li>表单选择器<ul>
+<li><code>:input</code></li>
+<li><code>:submit</code></li>
+<li><code>:selected</code></li>
+</ul>
+</li>
+<li>层级选择器<ul>
+<li><code>#id .class</code></li>
+</ul>
+</li>
+<li>混搭使用<ul>
+<li><code>#id .class input[type=&quot;text&quot;]</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="筛选"><a href="#筛选" class="headerlink" title="筛选"></a>筛选</h2><ol>
+<li><p><code>hasClass(class)</code> ：检查当前的元素是否含有某个特定的类，如果有，则返回true。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;!-- <span class="comment">// html代码 --&gt;</span></div><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"show"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line">&lt;!-- <span class="comment">// jQuery 代码 --&gt;</span></div><div class="line">$(<span class="string">'div'</span>).hasClass(<span class="string">'show'</span>); <span class="comment">// true;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><code>children([expr])</code> : 获取当前对象的子集（被选中的）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;!-- <span class="comment">// html代码 --&gt;</span></div><div class="line">&lt;ul&gt;</div><div class="line">	&lt;li&gt;<span class="number">1</span>&lt;<span class="regexp">/li&gt;</span></div><div class="line"><span class="regexp">	&lt;li class="li_ele"&gt;2&lt;/</span>li&gt;</div><div class="line">	&lt;li <span class="class"><span class="keyword">class</span></span>=<span class="string">"li_ele"</span>&gt;<span class="number">3</span>&lt;<span class="regexp">/li&gt;</span></div><div class="line"><span class="regexp">&lt;/u</span>l&gt;</div><div class="line">&lt;!-- <span class="comment">// jQuery 代码 --&gt;</span></div><div class="line">$(<span class="string">'ul'</span>).children(<span class="string">'.li_ele'</span>); <span class="comment">// 获取到了第二个和第三个li元素</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><code>find(expr|obj|ele)</code> : 获取当前对象的子集（被选中的）。<br> 使用方式同上    </p>
+</li>
+<li><code>parent([expr])</code> : 获取当前对象的父集。<br> 使用方式同上    </li>
+<li><code>prev([expr])</code> ：获取当前对象的前一个。<br> 使用方式同上    </li>
+<li><code>next([expr])</code> ：获取当前对象的后一个。<br> 使用方式同上    </li>
+<li><code>siblings([expr])</code> : 获取当前对象的所有同级元素。<br> 使用方式同上</li>
+</ol>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><ol>
+<li><p><code>on(events,[selector],[data],fn)</code> ：在选择元素上绑定一个或多个事件的事件处理函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'div'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">	<span class="comment">/* Act on the event */</span></div><div class="line">	<span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">// 打印div</span></div><div class="line">&#125;); <span class="comment">// 给div加上点击事件。</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><code>off(events,[selector],[fn])</code> ：在选择元素上移除一个或多个事件的事件处理函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'div'</span>).off(<span class="string">'click'</span>); <span class="comment">// 去掉div的单击事件。</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><code>trigger(type,[data])</code> ：在每一个匹配的元素上触发某类事件。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'form'</span>).trigger(<span class="string">'submit'</span>); <span class="comment">// 触发表单提交事件。</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><code>triggerHandler(type, [data])</code> ：触发指定的事件类型上所有绑定的处理函数。<br> 使用方法同上</p>
+<blockquote>
+<p>如果你对一个focus事件执行了 .triggerHandler() ，浏览器默认动作将不会被触发，只会触发你绑定的动作。</p>
+</blockquote>
+<p> ps : 这个方法的行为表现与trigger类似，但有以下三个主要区别： </p>
+<ul>
+<li>第一，他不会触发浏览器默认事件。</li>
+<li>第二，只触发jQuery对象集合中第一个元素的事件处理函数。</li>
+<li>第三，这个方法的返回的是事件处理函数的返回值，而不是据有可链性的jQuery对象。此外，如果最开始的jQuery对象集合为空，则这个方法返回 undefined。</li>
+</ul>
+</li>
+</ol>
+<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><ol>
+<li><p><code>show([speed,[easing],[fn]])</code> ：显示隐藏的匹配元素。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;!-- <span class="comment">// HTML 代码 --&gt;</span></div><div class="line">&lt;p style=<span class="string">"display: none;"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></div><div class="line">&lt;!-- <span class="comment">// jQuery 代码 --&gt;</span></div><div class="line">$(<span class="string">'p'</span>).show(); <span class="comment">// 立即显示。如果想显示动画可以传时间进去。`$('P').show(1000)`</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><code>hide([speed,[easing],[fn]])</code> ：隐藏显示的元素。<br> 使用方法同上</p>
+</li>
+<li><p><code>animate(params,[speed],[easing],[fn])</code> : 用于创建自定义动画的函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;!-- <span class="comment">// HTML 代码: --&gt;</span></div><div class="line">&lt;button id=<span class="string">"run"</span>&gt;Run&lt;<span class="regexp">/button&gt;</span></div><div class="line"><span class="regexp">&lt;div id="ye_animate"&gt;Hello!&lt;/</span>div&gt;</div><div class="line">&lt;!-- <span class="comment">// jQuery 代码: --&gt;</span></div><div class="line">$(<span class="string">"#run"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  $(<span class="string">"#ye_animate"</span>).animate(&#123; </div><div class="line">    width: <span class="string">"90%"</span>,</div><div class="line">    height: <span class="string">"100%"</span>,</div><div class="line">    fontSize: <span class="string">"10em"</span></div><div class="line">  &#125;, <span class="number">1000</span> );</div><div class="line">&#125;); <span class="comment">// 在一个动画中同时应用三种类型的效果。</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><code>stop([clearQueue],[jumpToEnd])</code> ：立即停止动画效果。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 假设上面的已经点击了‘Run’。我们在创建一个stop按钮。</span></div><div class="line">&lt;!-- <span class="comment">// HTML 代码: --&gt;</span></div><div class="line">&lt;button id=<span class="string">"stop"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></div><div class="line">&lt;!-- <span class="comment">// jQuery 代码: --&gt;</span></div><div class="line">$(<span class="string">"#stop"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  $(<span class="string">"#ye_animate"</span>).stop();</div><div class="line">&#125;); <span class="comment">// 立即停止动画。</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h2><ol>
+<li><p><code>jQuery.ajax(url,[settings])</code> : 创建同步或者异步的 HTTP 请求加载远程数据。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">$.ajax(&#123;</div><div class="line">	url: <span class="string">'/path/to/file'</span>, <span class="comment">// 请求的路径</span></div><div class="line">	type: <span class="string">'default GET (Other values: POST)'</span>, <span class="comment">// 请求的类型</span></div><div class="line">	dataType: <span class="string">'default: Intelligent Guess (Other values: xml, json, script, or html)'</span>, <span class="comment">// 请求头的数据类型。</span></div><div class="line">	<span class="keyword">async</span> : <span class="literal">true</span> , <span class="comment">// 同步或者异步， （默认是TRUE，异步。）</span></div><div class="line">	data: &#123;<span class="attr">param1</span>: <span class="string">'value1'</span>&#125;, <span class="comment">// 请求的参数。</span></div><div class="line">	beforeSend: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="comment">// 请求发送到请求返回前的时间。</span></div><div class="line">	&#125;,</div><div class="line">	success:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">		<span class="comment">// 返回成功后的处理代码。</span></div><div class="line">	&#125;,</div><div class="line">	error:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="comment">// 请求失败后。</span></div><div class="line">	&#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>jQuery.get(url, [data], [callback], [type])</code> : 默认是GET请求。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$.get(<span class="string">'/path/to/file'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">	<span class="comment">// 返回成功后的处理代码	</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>jQuery.post(url, [data], [callback], [type])</code> ： 默认是POST请求。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$.post(<span class="string">'/path/to/file'</span>, &#123;<span class="attr">param1</span>: <span class="string">'value1'</span>&#125;, <span class="function"><span class="keyword">function</span>(<span class="params">data, textStatus, xhr</span>) </span>&#123;</div><div class="line">	<span class="comment">// 返回成功后的处理代码	</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>jQuery.getScript(url, [callback])</code> ：GET 请求载入并执行一个 JavaScript 文件。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$.getScript(<span class="string">"/path/to/file"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="comment">// 返回成功后的处理代码	</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="其他常用"><a href="#其他常用" class="headerlink" title="其他常用"></a>其他常用</h2><ol>
+<li><p><code>each(callback)</code> : 遍历对象。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;!-- <span class="comment">// HTML 代码: --&gt;</span></div><div class="line">&lt;img/&gt;<span class="xml"><span class="tag">&lt;<span class="name">img</span>/&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">img</span>/&gt;</span></span></div><div class="line">&lt;!-- <span class="comment">// jQuery 代码: --&gt;</span></div><div class="line">$(<span class="string">"img"</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123;</div><div class="line">   <span class="keyword">this</span>.src = <span class="string">"test"</span> + i + <span class="string">".jpg"</span>; <span class="comment">// this指向调用着。（原生的dom对象）</span></div><div class="line"> &#125;);</div><div class="line">&lt;!-- <span class="comment">// 结果： --&gt;</span></div><div class="line">&lt;img src=<span class="string">"test0.jpg"</span> /&gt;&lt;img src="test1.jpg" /&gt;&lt;img src="test2.jpg" /&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>data([key],[value])</code> : 在一个div上存取数据。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;!-- <span class="comment">//	HTML 代码: --&gt;</span></div><div class="line">&lt;div data-index=<span class="string">"ye_cs"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div><div class="line">&lt;!-- <span class="comment">// jQuery 代码: --&gt;</span></div><div class="line">$(<span class="string">"div"</span>).data(<span class="string">"index"</span>);  <span class="comment">// ye_cs</span></div><div class="line">$(<span class="string">"div"</span>).data(<span class="string">"str"</span>, <span class="string">"hello world"</span>);  <span class="comment">// blah设置为hello</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><code>jQuery.each(object, [callback])</code> ： 遍历对象。<br> 使用方式同1。</p>
+</li>
+<li><code>jQuery.type(obj)</code> : 检测obj的数据类型。<ul>
+<li>jQuery.type(true)         === “boolean”</li>
+<li>jQuery.type(3)            === “number”</li>
+<li>jQuery.type(“test”)       === “string”</li>
+<li>jQuery.type(function(){}) === “function”</li>
+<li>jQuery.type([])           === “array”</li>
+<li>jQuery.type(new Date())   === “date”</li>
+<li>jQuery.type(/test/)       === “regexp”</li>
+</ul>
+</li>
+<li><p><code>event.preventDefault()</code> ：阻止默认事件行为的触发。</p>
+</li>
+<li><p><code>serialize()</code> ：序列表表格内容为字符串。</p>
+</li>
+</ol>
 
       
     </div>
@@ -674,9 +565,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/animation/" rel="tag"><i class="fa fa-tag"></i>  animation</a>
+            <a href="/tags/function/" rel="tag"><i class="fa fa-tag"></i>  function</a>
           
-            <a href="/tags/css动画/" rel="tag"><i class="fa fa-tag"></i>  css动画</a>
+            <a href="/tags/jquery/" rel="tag"><i class="fa fa-tag"></i>  jquery</a>
+          
+            <a href="/tags/common/" rel="tag"><i class="fa fa-tag"></i>  common</a>
           
         </div>
       
@@ -689,8 +582,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/20170815/gulp-get-start/" rel="next" title="gulp - 基于流的自动化构建工具">
-                <i class="fa fa-chevron-left"></i> gulp - 基于流的自动化构建工具
+              <a href="/20170816/php-common-function/" rel="next" title="PHP常用的函数">
+                <i class="fa fa-chevron-left"></i> PHP常用的函数
               </a>
             
           </div>
@@ -698,10 +591,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/20170815/linux-cenos-config/" rel="prev" title="Linux centos 配置更新yum源">
-                Linux centos 配置更新yum源 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -879,7 +768,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#动画效果-Animation"><span class="nav-number">1.</span> <span class="nav-text">动画效果 (Animation)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语法"><span class="nav-number">1.2.</span> <span class="nav-text">语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-name"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. name</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-duration"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. duration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-timing-function"><span class="nav-number">1.2.3.</span> <span class="nav-text">3. timing-function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-delay"><span class="nav-number">1.2.4.</span> <span class="nav-text">4. delay</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-iteration-count"><span class="nav-number">1.2.5.</span> <span class="nav-text">5. iteration-count</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-direction"><span class="nav-number">1.2.6.</span> <span class="nav-text">6. direction</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#属性"><span class="nav-number">1.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择器"><span class="nav-number">2.</span> <span class="nav-text">选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#筛选"><span class="nav-number">3.</span> <span class="nav-text">筛选</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件"><span class="nav-number">4.</span> <span class="nav-text">事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#效果"><span class="nav-number">5.</span> <span class="nav-text">效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AJAX"><span class="nav-number">6.</span> <span class="nav-text">AJAX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他常用"><span class="nav-number">7.</span> <span class="nav-text">其他常用</span></a></li></ol></div>
             
 
           </div>
