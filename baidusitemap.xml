@@ -4,6 +4,49 @@
 
     
   <url>
+    <loc>http://ym125.cc/20170819/composer-install/</loc>
+    <lastmod>2017-08-19T05:59:37.152Z</lastmod>
+    <data>
+        <display>
+        <title>composer安装和使用</title>
+        <pubTime>2017-08-19T05:51:08.000Z</pubTime>
+        
+        <tag>composer</tag>
+         
+         
+           
+             
+              <breadCrumb title="composer" url="http://ym125.cc/categories/composer/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ym125.cc/20170819/composer-get-start/</loc>
+    <lastmod>2017-08-19T05:56:40.753Z</lastmod>
+    <data>
+        <display>
+        <title>composer快速入门</title>
+        <pubTime>2017-08-19T05:52:19.000Z</pubTime>
+        
+        <tag>composer</tag>
+         
+        <tag>phpmailer</tag>
+         
+         
+           
+             
+              <breadCrumb title="composer" url="http://ym125.cc/categories/composer/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>http://ym125.cc/20170818/jquery-common-function/</loc>
     <lastmod>2017-08-17T16:39:02.608Z</lastmod>
     <data>
@@ -11,11 +54,11 @@
         <title>jQuery常用的方法</title>
         <pubTime>2017-08-17T16:35:42.000Z</pubTime>
         
+        <tag>common</tag>
+         
         <tag>function</tag>
          
         <tag>jquery</tag>
-         
-        <tag>common</tag>
          
          
            
@@ -37,9 +80,9 @@
         
         <tag>php</tag>
          
-        <tag>function</tag>
-         
         <tag>common</tag>
+         
+        <tag>function</tag>
          
          
            
@@ -147,11 +190,11 @@
         <title>gulp - 基于流的自动化构建工具</title>
         <pubTime>2017-08-15T08:18:42.000Z</pubTime>
         
-        <tag>gulp</tag>
-         
         <tag>nodejs</tag>
          
         <tag>自动化工具</tag>
+         
+        <tag>gulp</tag>
          
          
            
@@ -215,11 +258,11 @@
         <title>bower 快速入门</title>
         <pubTime>2017-08-15T07:37:54.000Z</pubTime>
         
+        <tag>bower</tag>
+         
         <tag>nodejs</tag>
          
         <tag>自动化工具</tag>
-         
-        <tag>bower</tag>
          
          
            
@@ -316,7 +359,6 @@
     </data>
     </url>
 
-    
     
     
 </urlset>

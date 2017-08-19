@@ -3,6 +3,98 @@
   
     
     <entry>
+      <title><![CDATA[composer快速入门]]></title>
+      <url>/20170819/composer-get-start/</url>
+      <content type="html"><![CDATA[<p>安装好后就可以开始使用<code>composer</code>命令了。</p>
+<p>这里我们那phpmailer举例子。例如你的项目需要用到phpmailer来发邮件。只需要两步：<code>下载</code>-&gt;<code>加载使用</code>。</p>
+<a id="more"></a>
+<h2 id="composer快速入门"><a href="#composer快速入门" class="headerlink" title="composer快速入门"></a>composer快速入门</h2><h4 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h4><p>命令：<code>composer require phpmailer/phpmailer</code><br>使用上面这个命令进行安装<code>phpmailer</code>。<br>执行完成后会看到生成<code>vendor/phpmailer</code> ，这样phpmailer就已经下载到你项目里面了。</p>
+<h4 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h4><p>引用类库。在你需要的使用的项目的文件里面加上着行代码。（这是统一格式无需修改）。<br><code>require &#39;vendor/autoload.php&#39;;</code></p>
+<h2 id="接下来就可以使用了。详细内容可以参考phpmailer手册。"><a href="#接下来就可以使用了。详细内容可以参考phpmailer手册。" class="headerlink" title="接下来就可以使用了。详细内容可以参考phpmailer手册。"></a>接下来就可以使用了。详细内容可以参考phpmailer手册。</h2><p>这里附上一个案例：<br>在根目录创建一个<code>test.php</code>文件。<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span> </div><div class="line"><span class="keyword">require</span> <span class="string">'vendor/autoload.php'</span>; </div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 发送邮件 **实际项目改成你的配置文件**</span></div><div class="line"><span class="comment"> * <span class="doctag">@date</span> 2016年11月14日</span></div><div class="line"><span class="comment"> * <span class="doctag">@author</span> Yexk &lt;yexk<span class="doctag">@yexk</span>.cn&gt;</span></div><div class="line"><span class="comment"> *</span></div><div class="line"><span class="comment"> * <span class="doctag">@param</span> String $address 收件人邮箱地址</span></div><div class="line"><span class="comment"> * <span class="doctag">@param</span> string $message 内容</span></div><div class="line"><span class="comment"> * <span class="doctag">@param</span> string $title   主题</span></div><div class="line"><span class="comment"> * <span class="doctag">@return</span> boolean        成功返回true,否则false</span></div><div class="line"><span class="comment"> *</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">send_mail</span><span class="params">($address,$message=<span class="string">''</span>,$title=<span class="string">''</span>)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    date_default_timezone_set(<span class="string">"Asia/Shanghai"</span>);<span class="comment">//设定时区东八区</span></div><div class="line">    $mail = <span class="keyword">new</span> \PHPMailer();</div><div class="line">    </div><div class="line">    <span class="comment">//设置smtp参数</span></div><div class="line">    <span class="comment">// $mail-&gt;SMTPDebug = 3;</span></div><div class="line">    $mail-&gt;IsSMTP();</div><div class="line">    $mail-&gt;SMTPAuth  = <span class="keyword">true</span>;</div><div class="line">    $mail-&gt;SMTPKeepAlive = <span class="keyword">true</span>;</div><div class="line">    $mail-&gt;SMTPSecure = <span class="string">'ssl'</span>;</div><div class="line">    $mail-&gt;CharSet = <span class="string">'UTF-8'</span>; <span class="comment">// 设置字符集编码</span></div><div class="line">    $mail-&gt;Host    = <span class="string">'smtp.exmail.qq.com'</span>;    <span class="comment">// 主机</span></div><div class="line">    $mail-&gt;Port    = <span class="string">'465'</span>;    <span class="comment">// 端口</span></div><div class="line">    </div><div class="line">    <span class="comment">//填写你的mail账号和密码 </span></div><div class="line">    $mail-&gt;Username=<span class="string">'test@yexk.cn'</span>; <span class="comment">// </span></div><div class="line">    $mail-&gt;Password=<span class="string">'xxxxxxxxxxx'</span>; <span class="comment">// </span></div><div class="line">    </div><div class="line">    <span class="comment">//设置发送方，最好不要伪造地址</span></div><div class="line">    $mail-&gt;From    = <span class="string">'test@yexk.cn'</span>;</div><div class="line">    $mail-&gt;FromName  = <span class="string">'test'</span>;<span class="comment">// 发件人的名字</span></div><div class="line"></div><div class="line">    <span class="keyword">if</span> (strlen($title)&gt;<span class="number">0</span>)&#123;</div><div class="line">        $mail-&gt;Subject=$title;</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        $mail-&gt;Subject=<span class="string">'scInternal内网系统'</span>;</div><div class="line">    &#125;<span class="comment">// 邮件主题</span></div><div class="line">    </div><div class="line">    <span class="comment">// $mail-&gt;WordWrap  = 50; // 设置自动换行</span></div><div class="line">    $mail-&gt;MsgHTML($message); <span class="comment">// 发件内容</span></div><div class="line">    <span class="comment">//设置邮件接收方的邮箱和姓名</span></div><div class="line">    $mail-&gt;AddAddress($address,$address);</div><div class="line">    <span class="comment">//使用HTML格式发送邮件</span></div><div class="line">    $mail-&gt;IsHTML(<span class="keyword">true</span>);</div><div class="line">    <span class="comment">//通过Send方法发送邮件</span></div><div class="line">    <span class="comment">//根据发送结果做相应处理</span></div><div class="line">    <span class="keyword">if</span>(!$mail-&gt;Send())</div><div class="line">    &#123;</div><div class="line">        $msg = <span class="string">'['</span> . date(<span class="string">'Y-m-d H:i:s'</span>) . <span class="string">' ==&gt; '</span> . $mail-&gt;ErrorInfo .<span class="string">"]"</span> . PHP_EOL;</div><div class="line">        file_put_contents(<span class="string">'send_mail.log'</span>, $msg ,FILE_APPEND);</div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    &#125; </div><div class="line">    <span class="keyword">else</span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var_dump(send_mail(<span class="string">'yexk@yexk.cn'</span>,<span class="string">'测试composer'</span>));</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        <categories>
+            
+            <category> composer </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> composer </tag>
+            
+            <tag> phpmailer </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[composer安装和使用]]></title>
+      <url>/20170819/composer-install/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>Composer 是 PHP 的一个依赖管理工具。它允许你申明项目所依赖的代码库，它会在你的项目中为你安装他们。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="下载和安装"><a href="#下载和安装" class="headerlink" title="下载和安装"></a>下载和安装</h2><p><strong>composer的用途</strong>：<br>a) 你有一个项目依赖于若干个库。<br>b) 其中一些库依赖于其他库。<br>c) 你声明你所依赖的东西。<br>d) Composer 会找出哪个版本的包需要安装，并安装它们（将它们下载到你的项目中）。</p>
+<h2 id="Linux安装"><a href="#Linux安装" class="headerlink" title="Linux安装"></a>Linux安装</h2><p>下载 Composer 的可执行文件</p>
+<h3 id="局部安装"><a href="#局部安装" class="headerlink" title="局部安装"></a>局部安装</h3><blockquote>
+<p>要真正获取 Composer，我们需要做两件事。首先安装 Composer （同样的，这意味着它将下载到你的项目中）：  </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -sS https://getcomposer.org/installer | php</div></pre></td></tr></table></figure>
+<blockquote>
+<p>注意： 如果上述方法由于某些原因失败了，你还可以通过 php &gt;下载安装器：<br><code>php -r &quot;readfile(&#39;https://getcomposer.org/installer&#39;);&quot; | php</code>   </p>
+</blockquote>
+<p>你可以通过 –install-dir 选项指定 Composer 的安装目录（它可以是一个绝对或相对路径）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -sS https://getcomposer.org/installer | php -- --install-dir=bin</div></pre></td></tr></table></figure></p>
+<h3 id="全局安装-推荐"><a href="#全局安装-推荐" class="headerlink" title="全局安装(推荐)"></a>全局安装(推荐)</h3><p>你可以将此文件放在任何地方。如果你把它放在系统的 PATH 目录中，你就能在全局访问它。 在类Unix系统中，你甚至可以在使用时不加 php 前缀。</p>
+<p>你可以执行这些命令让 composer 在你的系统中进行全局调用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">curl -sS https://getcomposer.org/installer | php</div><div class="line">mv composer.phar /usr/local/bin/composer</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>注意： 如果上诉命令因为权限执行失败， 请使用 sudo 再次尝试运行 mv 那行命令。</p>
+</blockquote>
+<p>现在只需要运行 composer 命令就可以使用 Composer 而不需要输入 php composer.phar。</p>
+<h2 id="Windows安装"><a href="#Windows安装" class="headerlink" title="Windows安装"></a>Windows安装</h2><p>使用安装程序 <a href="http://pan.baidu.com/s/1i5qVZud" target="_blank" rel="external">Composer-Setup.exe</a> 附上下载链接：<a href="http://pan.baidu.com/s/1i5qVZud" target="_blank" rel="external">http://pan.baidu.com/s/1i5qVZud</a></p>
+<p>这是将 Composer 安装在你机器上的最简单的方法。</p>
+<p>下载并且运行 <a href="http://pan.baidu.com/s/1i5qVZud" target="_blank" rel="external"><code>Composer-Setup.exe</code></a>，它将安装最新版本的 Composer ，并设置好系统的环境变量，因此你可以在任何目录下直接使用 <code>composer</code> 命令。</p>
+<p><strong><span style="color:red">注意：win10电脑必须用管理员权限安装！！！</span></strong></p>
+<hr>
+<blockquote>
+<p>由于改软件的服务器在国外。国内的速度。。。你懂的。。这里我们需要改成中国的镜像。</p>
+</blockquote>
+<h2 id="镜像用法"><a href="#镜像用法" class="headerlink" title="镜像用法"></a>镜像用法</h2><p>有两种方式启用本镜像服务：</p>
+<ul>
+<li><strong>系统全局配置</strong>： 即将配置信息添加到 Composer 的全局配置文件 config.json 中。见“方法一”</li>
+<li><strong>单个项目配置</strong>： 将配置信息添加到某个项目的 composer.json 文件中。见“方法二”</li>
+</ul>
+<h3 id="方法一：-修改-composer-的全局配置文件（推荐方式）"><a href="#方法一：-修改-composer-的全局配置文件（推荐方式）" class="headerlink" title="方法一： 修改 composer 的全局配置文件（推荐方式）"></a>方法一： 修改 composer 的全局配置文件（推荐方式）</h3><p>打开命令行窗口（windows用户）或控制台（Linux、Mac 用户）并执行如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer config -g repo.packagist composer https://packagist.phpcomposer.com</div></pre></td></tr></table></figure>
+<h3 id="方法二：-修改当前项目的-composer-json-配置文件："><a href="#方法二：-修改当前项目的-composer-json-配置文件：" class="headerlink" title="方法二： 修改当前项目的 composer.json 配置文件："></a>方法二： 修改当前项目的 composer.json 配置文件：</h3><p>打开命令行窗口（windows用户）或控制台（Linux、Mac 用户），进入你的项目的根目录（也就是 composer.json 文件所在目录），执行如下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer config repo.packagist composer https://packagist.phpcomposer.com</div></pre></td></tr></table></figure>
+<p>上述命令将会在当前项目中的 composer.json 文件的末尾自动添加镜像的配置信息（你也可以自己手工添加）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&quot;repositories&quot;: &#123;</div><div class="line">    &quot;packagist&quot;: &#123;</div><div class="line">        &quot;type&quot;: &quot;composer&quot;,</div><div class="line">        &quot;url&quot;: &quot;https://packagist.phpcomposer.com&quot;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>以 laravel 项目的 composer.json 配置文件为例，执行上述命令后如下所示（注意最后几行）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;name&quot;: &quot;laravel/laravel&quot;,</div><div class="line">    &quot;description&quot;: &quot;The Laravel Framework.&quot;,</div><div class="line">    &quot;keywords&quot;: [&quot;framework&quot;, &quot;laravel&quot;],</div><div class="line">    &quot;license&quot;: &quot;MIT&quot;,</div><div class="line">    &quot;type&quot;: &quot;project&quot;,</div><div class="line">    &quot;require&quot;: &#123;</div><div class="line">        &quot;php&quot;: &quot;&gt;=5.5.9&quot;,</div><div class="line">        &quot;laravel/framework&quot;: &quot;5.2.*&quot;</div><div class="line">    &#125;,</div><div class="line">    &quot;config&quot;: &#123;</div><div class="line">        &quot;preferred-install&quot;: &quot;dist&quot;</div><div class="line">    &#125;,</div><div class="line">    &quot;repositories&quot;: &#123;</div><div class="line">        &quot;packagist&quot;: &#123;</div><div class="line">            &quot;type&quot;: &quot;composer&quot;,</div><div class="line">            &quot;url&quot;: &quot;https://packagist.phpcomposer.com&quot;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>OK，一切搞定！试一下 composer install 来体验飞一般的速度吧！</p>
+<p>查看修改成功了没有？<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">修改前</div><div class="line"><span class="meta">#</span> composer config -g -l</div><div class="line">[repositories.packagist.org.type] composer</div><div class="line">[repositories.packagist.org.url] https?://packagist.org</div><div class="line"></div><div class="line">修改后</div><div class="line"><span class="meta">#</span> composer config -g -l</div><div class="line">[repositories.packagist.org.type] composer</div><div class="line">[repositories.packagist.org.url] https://packagist.phpcomposer.com</div></pre></td></tr></table></figure></p>
+<p>这样就代表修改成功咯！！</p>
+]]></content>
+      
+        <categories>
+            
+            <category> composer </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> composer </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[jQuery常用的方法]]></title>
       <url>/20170818/jquery-common-function/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -154,11 +246,11 @@
         
         <tags>
             
+            <tag> common </tag>
+            
             <tag> function </tag>
             
             <tag> jquery </tag>
-            
-            <tag> common </tag>
             
         </tags>
         
@@ -195,9 +287,9 @@
             
             <tag> php </tag>
             
-            <tag> function </tag>
-            
             <tag> common </tag>
+            
+            <tag> function </tag>
             
         </tags>
         
@@ -729,11 +821,11 @@
         
         <tags>
             
-            <tag> gulp </tag>
-            
             <tag> nodejs </tag>
             
             <tag> 自动化工具 </tag>
+            
+            <tag> gulp </tag>
             
         </tags>
         
@@ -1052,7 +1144,7 @@
 <blockquote>
 <p>eg. <code>bower install jquery</code><br>上述命令完成以后，你会在你刚才创建的目录下看到一个bower_components的文件夹。里面有jQuery文件。</p>
 </blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"bower_components/jquery/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">	$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="undefined">		alert(1);</span></div><div class="line"><span class="undefined">	&#125;);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"bower_components/jquery/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">	$(function()&#123;</span></div><div class="line"><span class="undefined">		alert(1);</span></div><div class="line"><span class="undefined">	&#125;);</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>其他命令：</p>
 <ul>
 <li>包搜索：<code>bower search jquery</code></li>
@@ -1077,11 +1169,11 @@
         
         <tags>
             
+            <tag> bower </tag>
+            
             <tag> nodejs </tag>
             
             <tag> 自动化工具 </tag>
-            
-            <tag> bower </tag>
             
         </tags>
         

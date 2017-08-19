@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ym125.cc/20170819/composer-install/</loc>
+    
+    <lastmod>2017-08-19T05:59:37.152Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ym125.cc/20170819/composer-get-start/</loc>
+    
+    <lastmod>2017-08-19T05:56:40.753Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ym125.cc/about/index.html</loc>
+    
+    <lastmod>2017-08-19T05:36:16.073Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ym125.cc/20170818/jquery-common-function/</loc>
     
     <lastmod>2017-08-17T16:39:02.608Z</lastmod>
@@ -110,13 +131,6 @@
     <loc>http://ym125.cc/categories/index.html</loc>
     
     <lastmod>2017-08-14T17:36:01.802Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ym125.cc/about/index.html</loc>
-    
-    <lastmod>2017-08-14T17:20:14.975Z</lastmod>
     
   </url>
   
