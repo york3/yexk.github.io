@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ym125.cc/20170825/laravel-lesson/</loc>
+    
+    <lastmod>2017-08-25T14:23:21.859Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ym125.cc/20170825/laravel-router/</loc>
+    
+    <lastmod>2017-08-25T14:16:35.413Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ym125.cc/20170825/laravel-download-install/</loc>
+    
+    <lastmod>2017-08-25T14:12:54.188Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ym125.cc/20170819/composer-install/</loc>
     
     <lastmod>2017-08-19T05:59:37.152Z</lastmod>

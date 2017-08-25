@@ -4,6 +4,72 @@
 
     
   <url>
+    <loc>http://ym125.cc/20170825/laravel-lesson/</loc>
+    <lastmod>2017-08-25T14:23:21.859Z</lastmod>
+    <data>
+        <display>
+        <title>lavavel 学习大纲（路线）</title>
+        <pubTime>2017-08-25T14:18:02.000Z</pubTime>
+        
+        <tag>lavavel</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://ym125.cc/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ym125.cc/20170825/laravel-router/</loc>
+    <lastmod>2017-08-25T14:16:35.413Z</lastmod>
+    <data>
+        <display>
+        <title>laravel基本路由</title>
+        <pubTime>2017-08-25T14:09:56.000Z</pubTime>
+        
+        <tag>laravel</tag>
+         
+        <tag>route</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://ym125.cc/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ym125.cc/20170825/laravel-download-install/</loc>
+    <lastmod>2017-08-25T14:12:54.188Z</lastmod>
+    <data>
+        <display>
+        <title>laravel下载和安装</title>
+        <pubTime>2017-08-25T14:06:30.000Z</pubTime>
+        
+        <tag>laravel</tag>
+         
+        <tag>download</tag>
+         
+        <tag>install</tag>
+         
+         
+           
+             
+              <breadCrumb title="php" url="http://ym125.cc/categories/php/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ym125.cc/20170819/composer-install/</loc>
     <lastmod>2017-08-19T05:59:37.152Z</lastmod>
     <data>
@@ -54,11 +120,11 @@
         <title>jQuery常用的方法</title>
         <pubTime>2017-08-17T16:35:42.000Z</pubTime>
         
-        <tag>common</tag>
-         
         <tag>function</tag>
          
         <tag>jquery</tag>
+         
+        <tag>common</tag>
          
          
            
@@ -80,9 +146,9 @@
         
         <tag>php</tag>
          
-        <tag>common</tag>
-         
         <tag>function</tag>
+         
+        <tag>common</tag>
          
          
            
