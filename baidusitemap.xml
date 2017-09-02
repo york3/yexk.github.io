@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://ym125.cc/20170902/emtpy-isset/</loc>
+    <lastmod>2017-09-02T12:34:48.348Z</lastmod>
+    <data>
+        <display>
+        <title>ISSET和EMPTY的区别</title>
+        <pubTime>2017-09-02T12:12:16.000Z</pubTime>
+        
+        <tag>isset</tag>
+         
+        <tag>empty</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://ym125.cc/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ym125.cc/20170825/laravel-lesson/</loc>
     <lastmod>2017-09-02T05:57:02.676Z</lastmod>
     <data>
