@@ -94,7 +94,7 @@
 
 
 
-<meta name="description" content="mysql5.7中datetime默认值设置0000-00-00失败的问题 问题：mysql5.7之后版本datetime默认值设置’0000-00-00’，出现异常：Invalid default value for ‘create_time’  1234567-- 例如这个表格：DROP TABLE IF EXISTS `test`;CREATE TABLE `test` (  `id` in">
+<meta name="description" content="mysql5.7中datetime默认值设置0000-00-00失败的问题 问题：mysql5.7之后版本datetime默认值设置’0000-00-00’，出现异常：Invalid default value for ‘create_time’  1234567-- 例如这个表格：DROP TABLE IF EXIS">
 <meta name="keywords" content="mysql,常见问题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL遇到的问题">
@@ -416,22 +416,22 @@
         <h2 id="mysql5-7中datetime默认值设置0000-00-00失败的问题"><a href="#mysql5-7中datetime默认值设置0000-00-00失败的问题" class="headerlink" title="mysql5.7中datetime默认值设置0000-00-00失败的问题"></a>mysql5.7中datetime默认值设置0000-00-00失败的问题</h2><blockquote>
 <p>问题：mysql5.7之后版本datetime默认值设置’0000-00-00’，出现异常：Invalid default value for ‘create_time’</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">-- 例如这个表格：</div><div class="line">DROP TABLE IF EXISTS `test`;</div><div class="line">CREATE TABLE `test` (</div><div class="line">  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT &apos;自增ID&apos;,</div><div class="line">  `time` datetime NOT NULL DEFAULT &apos;0000-00-00 00:00:00&apos; COMMENT &apos;添加时间&apos;,</div><div class="line">  PRIMARY KEY (`id`)</div><div class="line">);</div></pre></td></tr></table></figure>
-<p>添加的时候就会报错：<br><img src="/20170816/mysql-question/mysql_default_value.jpg" alt="mysql_default_value.jpg" title=""></p>
-<p>这个时候在MySQL的配置文件的<code>[mysqld]</code>中加入：<br><code>sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION</code><br><img src="/20170816/mysql-question/mysql_default_value_conf.jpg" alt="mysql_default_value_conf.jpg" title=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-- 例如这个表格：</span><br><span class="line">DROP TABLE IF EXISTS `test`;</span><br><span class="line">CREATE TABLE `test` (</span><br><span class="line">  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT &apos;自增ID&apos;,</span><br><span class="line">  `time` datetime NOT NULL DEFAULT &apos;0000-00-00 00:00:00&apos; COMMENT &apos;添加时间&apos;,</span><br><span class="line">  PRIMARY KEY (`id`)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>添加的时候就会报错：<br><img src="/20170816/mysql-question/mysql_default_value.jpg"></p>
+<p>这个时候在MySQL的配置文件的<code>[mysqld]</code>中加入：<br><code>sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION</code><br><img src="/20170816/mysql-question/mysql_default_value_conf.jpg"></p>
 <p>最后重启再导入就行了。</p>
 <blockquote>
-<p>附上原文链接 <a href="http://blog.csdn.net/sd4493091/article/details/54947851" target="_blank" rel="external">http://blog.csdn.net/sd4493091/article/details/54947851</a> (此处对原文稍作修改)</p>
+<p>附上原文链接 <a href="http://blog.csdn.net/sd4493091/article/details/54947851" target="_blank" rel="noopener">http://blog.csdn.net/sd4493091/article/details/54947851</a> (此处对原文稍作修改)</p>
 </blockquote>
 <h2 id="MySQL解决-Err-1206-The-total-number-of-locks-exceeds-the-lock-table-size问题"><a href="#MySQL解决-Err-1206-The-total-number-of-locks-exceeds-the-lock-table-size问题" class="headerlink" title="MySQL解决[Err] 1206 - The total number of locks exceeds the lock table size问题"></a>MySQL解决[Err] 1206 - The total number of locks exceeds the lock table size问题</h2><blockquote>
 <p>默认缓冲区的文件大小问题。。</p>
 </blockquote>
-<p>在配置文件改成一个较大的大小就行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">innodb_buffer_pool_size = 2G</div></pre></td></tr></table></figure></p>
-<h2 id="mysql的蠕虫复制"><a href="#mysql的蠕虫复制" class="headerlink" title="mysql的蠕虫复制"></a>mysql的蠕虫复制</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">insert into test1 (name) select name from test1;</div></pre></td></tr></table></figure>
+<p>在配置文件改成一个较大的大小就行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">innodb_buffer_pool_size = 2G</span><br></pre></td></tr></table></figure></p>
+<h2 id="mysql的蠕虫复制"><a href="#mysql的蠕虫复制" class="headerlink" title="mysql的蠕虫复制"></a>mysql的蠕虫复制</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into test1 (name) select name from test1;</span><br></pre></td></tr></table></figure>
 <h1 id="开启远程访问"><a href="#开启远程访问" class="headerlink" title="开启远程访问"></a>开启远程访问</h1><p>在本机先使用root用户登录mysql： mysql -u root -p”youpassword” 进行授权操作：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'youpassword' WITH GRANT OPTION;</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'youpassword' WITH GRANT OPTION;</span><br></pre></td></tr></table></figure>
 <p>重载授权表：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">FLUSH PRIVILEGES;</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -560,7 +560,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -571,7 +571,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -582,7 +582,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">35</span>
+                <span class="site-state-item-count">36</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

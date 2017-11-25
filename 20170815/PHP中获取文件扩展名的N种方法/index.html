@@ -94,7 +94,7 @@
 
 
 
-<meta name="description" content="PHP中获取文件扩展名的N种方法从网上收罗的，基本上就以下这几种方式： 第1种方法：12345&amp;lt;?phpfunction get_extension($file)&amp;#123;	return substr(strrchr($file, &apos;.&apos;), 1);&amp;#125; 第2种方法：12345&amp;lt;?phpfunction get_extension($file)&amp;#123;	return su">
+<meta name="description" content="PHP中获取文件扩展名的N种方法从网上收罗的，基本上就以下这几种方式： 第1种方法：12345&amp;lt;?phpfunction get_extension($file)&amp;#123;	return substr(strrchr($file, &apos;.&apos;), 1);&amp;#125; 第2">
 <meta name="keywords" content="php,function">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PHP中获取文件扩展名的N种方法">
@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Yexk_M 极致分享">
 <meta property="og:description" content="PHP中获取文件扩展名的N种方法从网上收罗的，基本上就以下这几种方式： 第1种方法：12345&amp;lt;?phpfunction get_extension($file)&amp;#123;	return substr(strrchr($file, &apos;.&apos;), 1);&amp;#125; 第2种方法：12345&amp;lt;?phpfunction get_extension($file)&amp;#123;	return su">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-14T17:49:28.739Z">
+<meta property="og:updated_time" content="2017-08-14T17:49:28.740Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PHP中获取文件扩展名的N种方法">
 <meta name="twitter:description" content="PHP中获取文件扩展名的N种方法从网上收罗的，基本上就以下这几种方式： 第1种方法：12345&amp;lt;?phpfunction get_extension($file)&amp;#123;	return substr(strrchr($file, &apos;.&apos;), 1);&amp;#125; 第2种方法：12345&amp;lt;?phpfunction get_extension($file)&amp;#123;	return su">
@@ -411,11 +411,11 @@
 
       
         <h2 id="PHP中获取文件扩展名的N种方法"><a href="#PHP中获取文件扩展名的N种方法" class="headerlink" title="PHP中获取文件扩展名的N种方法"></a>PHP中获取文件扩展名的N种方法</h2><p>从网上收罗的，基本上就以下这几种方式：</p>
-<h4 id="第1种方法："><a href="#第1种方法：" class="headerlink" title="第1种方法："></a>第1种方法：</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_extension</span><span class="params">($file)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">return</span> substr(strrchr($file, <span class="string">'.'</span>), <span class="number">1</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="第2种方法："><a href="#第2种方法：" class="headerlink" title="第2种方法："></a>第2种方法：</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_extension</span><span class="params">($file)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">return</span> substr($file, strrpos($file, <span class="string">'.'</span>)+<span class="number">1</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="第3种方法："><a href="#第3种方法：" class="headerlink" title="第3种方法："></a>第3种方法：</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_extension</span><span class="params">($file)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	$info = explode(<span class="string">'.'</span>, $file);</div><div class="line">	<span class="keyword">return</span> end($info);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="第4种方法："><a href="#第4种方法：" class="headerlink" title="第4种方法："></a>第4种方法：</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_extension</span><span class="params">($file)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	$info = pathinfo($file);</div><div class="line">	<span class="keyword">return</span> $info[<span class="string">'extension'</span>];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="第5种方法："><a href="#第5种方法：" class="headerlink" title="第5种方法："></a>第5种方法：</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_extension</span><span class="params">($file)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">return</span> pathinfo($file, PATHINFO_EXTENSION);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="第1种方法："><a href="#第1种方法：" class="headerlink" title="第1种方法："></a>第1种方法：</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_extension</span><span class="params">($file)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> substr(strrchr($file, <span class="string">'.'</span>), <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="第2种方法："><a href="#第2种方法：" class="headerlink" title="第2种方法："></a>第2种方法：</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_extension</span><span class="params">($file)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> substr($file, strrpos($file, <span class="string">'.'</span>)+<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="第3种方法："><a href="#第3种方法：" class="headerlink" title="第3种方法："></a>第3种方法：</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_extension</span><span class="params">($file)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	$info = explode(<span class="string">'.'</span>, $file);</span><br><span class="line">	<span class="keyword">return</span> end($info);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="第4种方法："><a href="#第4种方法：" class="headerlink" title="第4种方法："></a>第4种方法：</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_extension</span><span class="params">($file)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	$info = pathinfo($file);</span><br><span class="line">	<span class="keyword">return</span> $info[<span class="string">'extension'</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="第5种方法："><a href="#第5种方法：" class="headerlink" title="第5种方法："></a>第5种方法：</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_extension</span><span class="params">($file)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> pathinfo($file, PATHINFO_EXTENSION);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>大概看了下上面的几种情况。你会喜欢用几种呢？</p>
 </blockquote>
@@ -555,7 +555,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -566,7 +566,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -577,7 +577,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">35</span>
+                <span class="site-state-item-count">36</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

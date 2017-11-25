@@ -425,13 +425,13 @@
 <blockquote>
 <p>cnpm是国内镜像版的npm。<a href="../other/npm_introduction.md">什么是npm？</a></p>
 </blockquote>
-<h2 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h2><h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><p>初始化一个node项目。需要配置一个package.json文件放到项目的根目录。<br><img src="/20170815/gulp-get-start/node_init.png" alt="node_init.png" title=""></p>
+<h2 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h2><h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><p>初始化一个node项目。需要配置一个package.json文件放到项目的根目录。<br><img src="/20170815/gulp-get-start/node_init.png"></p>
 <h3 id="本地项目安装gulp"><a href="#本地项目安装gulp" class="headerlink" title="本地项目安装gulp"></a>本地项目安装gulp</h3><p>在项目的更目录下安装gulp，执行命令：<code>cnpm install gulp --save-dev</code></p>
 <blockquote>
 <p>一般工具这类的东西都安装到<strong>-dev</strong>环境下。</p>
 </blockquote>
-<img src="/20170815/gulp-get-start/install_gulp_local.png" alt="install_gulp_local.png" title="">
-<h3 id="本地安装gulp插件"><a href="#本地安装gulp插件" class="headerlink" title="本地安装gulp插件"></a>本地安装gulp插件</h3><p>这里拿编译sass的插件举例子。其他的插件也大小雷同。<br>安装命令：<code>cnpm install gulp-sass --save-dev</code><br><img src="/20170815/gulp-get-start/install_gulp_sass.png" alt="install_gulp_sass.png" title=""></p>
+<img src="/20170815/gulp-get-start/install_gulp_local.png">
+<h3 id="本地安装gulp插件"><a href="#本地安装gulp插件" class="headerlink" title="本地安装gulp插件"></a>本地安装gulp插件</h3><p>这里拿编译sass的插件举例子。其他的插件也大小雷同。<br>安装命令：<code>cnpm install gulp-sass --save-dev</code><br><img src="/20170815/gulp-get-start/install_gulp_sass.png"></p>
 <blockquote>
 <p><strong>安装常用插件</strong>：</p>
 </blockquote>
@@ -512,15 +512,15 @@
 <h3 id="在项目的更目录创建一个gulpfile-js文件"><a href="#在项目的更目录创建一个gulpfile-js文件" class="headerlink" title="在项目的更目录创建一个gulpfile.js文件"></a>在项目的更目录创建一个gulpfile.js文件</h3><blockquote>
 <p><span style="color:red">注意：</span>这个文件名字是固定的，不允许更改。</p>
 </blockquote>
-<p>在根目录创建文件：<code>gulpfile.js</code><br>写入如下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line"><span class="keyword">const</span> sass = <span class="built_in">require</span>(<span class="string">'gulp-sass'</span>);</div><div class="line"><span class="keyword">const</span> sass_path = <span class="string">'./src/css/*.scss'</span>;</div><div class="line"><span class="comment">// 创建了一个任务，监听了scss文件，通过sass插件去编译生成css</span></div><div class="line">gulp.task(<span class="string">'sass'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">'this is sass task!'</span>);</div><div class="line">	gulp.src(sass_path)</div><div class="line">		.pipe(sass())</div><div class="line">		.pipe(gulp.dest(<span class="string">'./dist/css/'</span>));</div><div class="line">&#125;);</div><div class="line"><span class="comment">// 再创建一个gulp任务用于监听上面的任务。</span></div><div class="line">gulp.task(<span class="string">'default'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">'this is default task! i\'m watch sass task!'</span>);</div><div class="line">	gulp.watch(sass_path,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		gulp.run(<span class="string">'sass'</span>);</div><div class="line">	&#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p>在<code>./src/css/</code>目录下创建一个文件,后缀为scss。如:<code>base.scss</code>。<br>使用sass语法写下样式文件：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$gray : #ccc;</div><div class="line"><span class="selector-tag">body</span>&#123;</div><div class="line">	<span class="attribute">background-color</span>: $gray;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.body</span>&#123;</div><div class="line">	<span class="attribute">color</span>: $gray;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>启动gulp任务：<br><img src="/20170815/gulp-get-start/gulp_start.png" alt="gulp_start.png" title=""></p>
+<p>在根目录创建文件：<code>gulpfile.js</code><br>写入如下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line"><span class="keyword">const</span> sass = <span class="built_in">require</span>(<span class="string">'gulp-sass'</span>);</span><br><span class="line"><span class="keyword">const</span> sass_path = <span class="string">'./src/css/*.scss'</span>;</span><br><span class="line"><span class="comment">// 创建了一个任务，监听了scss文件，通过sass插件去编译生成css</span></span><br><span class="line">gulp.task(<span class="string">'sass'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'this is sass task!'</span>);</span><br><span class="line">	gulp.src(sass_path)</span><br><span class="line">		.pipe(sass())</span><br><span class="line">		.pipe(gulp.dest(<span class="string">'./dist/css/'</span>));</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 再创建一个gulp任务用于监听上面的任务。</span></span><br><span class="line">gulp.task(<span class="string">'default'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'this is default task! i\'m watch sass task!'</span>);</span><br><span class="line">	gulp.watch(sass_path,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		gulp.run(<span class="string">'sass'</span>);</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>在<code>./src/css/</code>目录下创建一个文件,后缀为scss。如:<code>base.scss</code>。<br>使用sass语法写下样式文件：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$gray : #ccc;</span><br><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">	<span class="attribute">background-color</span>: $gray;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.body</span>&#123;</span><br><span class="line">	<span class="attribute">color</span>: $gray;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>启动gulp任务：<br><img src="/20170815/gulp-get-start/gulp_start.png"></p>
 <blockquote>
 <p>注意：启动命令为：gulp <task名字> 。当task名字为“defualt”的时候可以省略。</task名字></p>
 </blockquote>
-<p>如果运行不报错可以看到自动生成了dist目录。有css/base.css文件。<br><img src="/20170815/gulp-get-start/gulp_result.png" alt="gulp_result.png" title=""></p>
+<p>如果运行不报错可以看到自动生成了dist目录。有css/base.css文件。<br><img src="/20170815/gulp-get-start/gulp_result.png"></p>
 <blockquote>
-<p>到此gulp快速入门完成了。更多的api和教程可以查看官方的：<a href="http://www.gulpjs.com.cn/docs/api/" target="_blank" rel="external">gulp官网的API</a>。<br>次案例的源码：<a href="code/gulp.zip">code/gulp.zip</a></p>
+<p>到此gulp快速入门完成了。更多的api和教程可以查看官方的：<a href="http://www.gulpjs.com.cn/docs/api/" target="_blank" rel="noopener">gulp官网的API</a>。<br>次案例的源码：<a href="code/gulp.zip">code/gulp.zip</a></p>
 </blockquote>
 
       
@@ -653,7 +653,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -664,7 +664,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -675,7 +675,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">35</span>
+                <span class="site-state-item-count">36</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

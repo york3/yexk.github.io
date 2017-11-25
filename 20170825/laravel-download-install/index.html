@@ -415,15 +415,15 @@
 </blockquote>
 <a id="more"></a>
 <h3 id="通过-Laravel-安装工具"><a href="#通过-Laravel-安装工具" class="headerlink" title="通过 Laravel 安装工具"></a>通过 Laravel 安装工具</h3><p>首先，使用 Composer 下载 Laravel 安装包：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer global require "laravel/installer"</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer global require "laravel/installer"</span><br></pre></td></tr></table></figure>
 <p>请确定你已将 <code>~/.composer/vendor/bin</code> 路径加到 PATH，只有这样系统才能找到 laravel 的执行文件。</p>
 <p>一旦安装完成，就可以使用 <code>laravel new</code> 命令在指定目录创建一个新的 Laravel 项目。<br>例如：<code>laravel new blog</code> 将会在当前目录下创建一个叫 blog 的目录，此目录里面存放着新安装的 Laravel 和代码依赖。<br>这个方法的安装速度比通过 Composer 安装要快上许多，因为代码依赖是直接一起打包安装的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">laravel new blog</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">laravel new blog</span><br></pre></td></tr></table></figure>
 <p>在安装 Laravel 之后，你需要配置你的 Web 服务器的根目录为 public 目录。 这个目录的 index.php 文件作为所有 HTTP 请求进入应用的前端处理器。</p>
 <blockquote>
 <p>目录权限<br>安装 Laravel 之后， 你需要配置一些权限 。 storage 和 bootstrap/cache 目录应该允许你的 Web 服务器写入，否则 Laravel 将无法写入。</p>
 </blockquote>
-<h2 id="目录结构解析"><a href="#目录结构解析" class="headerlink" title="目录结构解析"></a>目录结构解析</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">Laravel</div><div class="line">├─app                       --- 应用程序的核心代码</div><div class="line">│  ├─Console                --- 应用所有自定义的 Artisan 命令</div><div class="line">│  ├─Exceptions </div><div class="line">│  ├─Http                   --- 目录包含了控制器、中间件以及表单请求等，几乎所有进入应用的请求处理都在这里进行。</div><div class="line">│  │  ├─Controllers</div><div class="line">│  │  └─Middleware         </div><div class="line">│  └─Providers</div><div class="line">├─bootstrap                 --- 几个框架启动和自动加载设置的文件</div><div class="line">├─config					--- 应用程序的配置文件</div><div class="line">├─database                  --- 数据迁移及填充文件，你还可以将其作为 SQLite 数据库的存放目录。</div><div class="line">│  ├─migrations             --- </div><div class="line">├─public                    --- Laravel 的 HTTP 入口文件 index.php 和前端资源文件（图片、JavaScript、CSS等）。</div><div class="line">├─resources                 --- 视图、原始的资源文件 (LESS、SASS、CoffeeScript) ，以及语言包。</div><div class="line">│  ├─assets</div><div class="line">│  ├─lang</div><div class="line">│  └─views</div><div class="line">├─routes                    --- 应用的所有路由定义。Laravel 默认提供了三个路由文件：web.php, api.php, 和 console.php。</div><div class="line">├─storage                   --- 编译后的 Blade 模板、基于文件的 session、文件缓存和其它框架生成的文件。</div><div class="line">│  ├─app</div><div class="line">│  ├─framework</div><div class="line">│  └─logs</div><div class="line">├─tests                     --- 目录包含自动化测试。</div><div class="line">│  ├─Feature</div><div class="line">│  └─Unit</div><div class="line">└─vendor                    --- 包含所有 Composer 依赖。</div></pre></td></tr></table></figure>
+<h2 id="目录结构解析"><a href="#目录结构解析" class="headerlink" title="目录结构解析"></a>目录结构解析</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">Laravel</span><br><span class="line">├─app                       --- 应用程序的核心代码</span><br><span class="line">│  ├─Console                --- 应用所有自定义的 Artisan 命令</span><br><span class="line">│  ├─Exceptions </span><br><span class="line">│  ├─Http                   --- 目录包含了控制器、中间件以及表单请求等，几乎所有进入应用的请求处理都在这里进行。</span><br><span class="line">│  │  ├─Controllers</span><br><span class="line">│  │  └─Middleware         </span><br><span class="line">│  └─Providers</span><br><span class="line">├─bootstrap                 --- 几个框架启动和自动加载设置的文件</span><br><span class="line">├─config					--- 应用程序的配置文件</span><br><span class="line">├─database                  --- 数据迁移及填充文件，你还可以将其作为 SQLite 数据库的存放目录。</span><br><span class="line">│  ├─migrations             --- </span><br><span class="line">├─public                    --- Laravel 的 HTTP 入口文件 index.php 和前端资源文件（图片、JavaScript、CSS等）。</span><br><span class="line">├─resources                 --- 视图、原始的资源文件 (LESS、SASS、CoffeeScript) ，以及语言包。</span><br><span class="line">│  ├─assets</span><br><span class="line">│  ├─lang</span><br><span class="line">│  └─views</span><br><span class="line">├─routes                    --- 应用的所有路由定义。Laravel 默认提供了三个路由文件：web.php, api.php, 和 console.php。</span><br><span class="line">├─storage                   --- 编译后的 Blade 模板、基于文件的 session、文件缓存和其它框架生成的文件。</span><br><span class="line">│  ├─app</span><br><span class="line">│  ├─framework</span><br><span class="line">│  └─logs</span><br><span class="line">├─tests                     --- 目录包含自动化测试。</span><br><span class="line">│  ├─Feature</span><br><span class="line">│  └─Unit</span><br><span class="line">└─vendor                    --- 包含所有 Composer 依赖。</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>Laravel 默认的目录结构意在为构建不同大小的应用提供一个好的起点，当然，你可以自己按照喜好组织应用目录结构，Laravel 对类在何处被加载没有任何限制 – 只要 Composer 可以自动载入它们即可。</p>
 </blockquote>
@@ -590,7 +590,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -601,7 +601,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -612,7 +612,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">35</span>
+                <span class="site-state-item-count">36</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
