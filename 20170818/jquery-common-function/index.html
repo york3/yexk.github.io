@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="common,function,jquery," />
+  <meta name="keywords" content="function,jquery,common," />
 
 
 
@@ -95,14 +95,14 @@
 
 
 <meta name="description" content="个人总结一些工作中必须使用和掌握的jQuery方法。">
-<meta name="keywords" content="common,function,jquery">
+<meta name="keywords" content="function,jquery,common">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery常用的方法">
 <meta property="og:url" content="http://ym125.cc/20170818/jquery-common-function/index.html">
 <meta property="og:site_name" content="Yexk_M 极致分享">
 <meta property="og:description" content="个人总结一些工作中必须使用和掌握的jQuery方法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-17T16:39:02.608Z">
+<meta property="og:updated_time" content="2017-11-25T06:00:17.889Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery常用的方法">
 <meta name="twitter:description" content="个人总结一些工作中必须使用和掌握的jQuery方法。">
@@ -422,7 +422,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'a'</span>).removeAttr(<span class="string">'href'</span>); <span class="comment">// 移除一个href属性</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>addClass(class|fn)</code> ：添加一个class（类）名。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- <span class="comment">// HTML 代码: --&gt;</span></span><br><span class="line">&lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;!-- <span class="comment">// jQuery 代码: --&gt;</span></span><br><span class="line">$(<span class="string">"div"</span>).addClass(<span class="string">'show_div'</span>);</span><br><span class="line">&lt;!-- <span class="comment">// 结果： --&gt;</span></span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"show_div"</span>&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- <span class="comment">// HTML 代码: --&gt;</span></span><br><span class="line">&lt;div&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;!-- <span class="comment">// jQuery 代码: --&gt;</span></span><br><span class="line">$(<span class="string">"div"</span>).addClass(<span class="string">'show_div'</span>);</span><br><span class="line">&lt;!-- <span class="comment">// 结果： --&gt;</span></span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"show_div"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>removeClass([class|fn])</code> : 移除元素的class（类）名。<br> 和3使用方法相同，效果相反。</p>
 </li>
@@ -463,7 +463,7 @@
 </ol>
 <h2 id="筛选"><a href="#筛选" class="headerlink" title="筛选"></a>筛选</h2><ol>
 <li><p><code>hasClass(class)</code> ：检查当前的元素是否含有某个特定的类，如果有，则返回true。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- <span class="comment">// html代码 --&gt;</span></span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"show"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;!-- <span class="comment">// jQuery 代码 --&gt;</span></span><br><span class="line">$(<span class="string">'div'</span>).hasClass(<span class="string">'show'</span>); <span class="comment">// true;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- <span class="comment">// html代码 --&gt;</span></span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"show"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;!-- <span class="comment">// jQuery 代码 --&gt;</span></span><br><span class="line">$(<span class="string">'div'</span>).hasClass(<span class="string">'show'</span>); <span class="comment">// true;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>children([expr])</code> : 获取当前对象的子集（被选中的）。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- <span class="comment">// html代码 --&gt;</span></span><br><span class="line">&lt;ul&gt;</span><br><span class="line">	&lt;li&gt;<span class="number">1</span>&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">	&lt;li class="li_ele"&gt;2&lt;/</span>li&gt;</span><br><span class="line">	&lt;li <span class="class"><span class="keyword">class</span></span>=<span class="string">"li_ele"</span>&gt;<span class="number">3</span>&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">&lt;/u</span>l&gt;</span><br><span class="line">&lt;!-- <span class="comment">// jQuery 代码 --&gt;</span></span><br><span class="line">$(<span class="string">'ul'</span>).children(<span class="string">'.li_ele'</span>); <span class="comment">// 获取到了第二个和第三个li元素</span></span><br></pre></td></tr></table></figure>
@@ -499,7 +499,7 @@
 </ol>
 <h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><ol>
 <li><p><code>show([speed,[easing],[fn]])</code> ：显示隐藏的匹配元素。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- <span class="comment">// HTML 代码 --&gt;</span></span><br><span class="line">&lt;p style=<span class="string">"display: none;"</span>&gt;&lt;/p&gt;</span><br><span class="line">&lt;!-- <span class="comment">// jQuery 代码 --&gt;</span></span><br><span class="line">$(<span class="string">'p'</span>).show(); <span class="comment">// 立即显示。如果想显示动画可以传时间进去。`$('P').show(1000)`</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- <span class="comment">// HTML 代码 --&gt;</span></span><br><span class="line">&lt;p style=<span class="string">"display: none;"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line">&lt;!-- <span class="comment">// jQuery 代码 --&gt;</span></span><br><span class="line">$(<span class="string">'p'</span>).show(); <span class="comment">// 立即显示。如果想显示动画可以传时间进去。`$('P').show(1000)`</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>hide([speed,[easing],[fn]])</code> ：隐藏显示的元素。<br> 使用方法同上</p>
 </li>
@@ -507,7 +507,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- <span class="comment">// HTML 代码: --&gt;</span></span><br><span class="line">&lt;button id=<span class="string">"run"</span>&gt;Run&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">&lt;div id="ye_animate"&gt;Hello!&lt;/</span>div&gt;</span><br><span class="line">&lt;!-- <span class="comment">// jQuery 代码: --&gt;</span></span><br><span class="line">$(<span class="string">"#run"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  $(<span class="string">"#ye_animate"</span>).animate(&#123; </span><br><span class="line">    width: <span class="string">"90%"</span>,</span><br><span class="line">    height: <span class="string">"100%"</span>,</span><br><span class="line">    fontSize: <span class="string">"10em"</span></span><br><span class="line">  &#125;, <span class="number">1000</span> );</span><br><span class="line">&#125;); <span class="comment">// 在一个动画中同时应用三种类型的效果。</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>stop([clearQueue],[jumpToEnd])</code> ：立即停止动画效果。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设上面的已经点击了‘Run’。我们在创建一个stop按钮。</span></span><br><span class="line">&lt;!-- <span class="comment">// HTML 代码: --&gt;</span></span><br><span class="line">&lt;button id=<span class="string">"stop"</span>&gt;&lt;/button&gt;</span><br><span class="line">&lt;!-- <span class="comment">// jQuery 代码: --&gt;</span></span><br><span class="line">$(<span class="string">"#stop"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  $(<span class="string">"#ye_animate"</span>).stop();</span><br><span class="line">&#125;); <span class="comment">// 立即停止动画。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设上面的已经点击了‘Run’。我们在创建一个stop按钮。</span></span><br><span class="line">&lt;!-- <span class="comment">// HTML 代码: --&gt;</span></span><br><span class="line">&lt;button id=<span class="string">"stop"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">&lt;!-- <span class="comment">// jQuery 代码: --&gt;</span></span><br><span class="line">$(<span class="string">"#stop"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  $(<span class="string">"#ye_animate"</span>).stop();</span><br><span class="line">&#125;); <span class="comment">// 立即停止动画。</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h2 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h2><ol>
@@ -526,10 +526,10 @@
 </ol>
 <h2 id="其他常用"><a href="#其他常用" class="headerlink" title="其他常用"></a>其他常用</h2><ol>
 <li><p><code>each(callback)</code> : 遍历对象。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- <span class="comment">// HTML 代码: --&gt;</span></span><br><span class="line">&lt;img/&gt;&lt;img/&gt;&lt;img/&gt;</span><br><span class="line">&lt;!-- <span class="comment">// jQuery 代码: --&gt;</span></span><br><span class="line">$(<span class="string">"img"</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123;</span><br><span class="line">   <span class="keyword">this</span>.src = <span class="string">"test"</span> + i + <span class="string">".jpg"</span>; <span class="comment">// this指向调用着。（原生的dom对象）</span></span><br><span class="line"> &#125;);</span><br><span class="line">&lt;!-- <span class="comment">// 结果： --&gt;</span></span><br><span class="line">&lt;img src=<span class="string">"test0.jpg"</span> /&gt;&lt;img src="test1.jpg" /&gt;&lt;img src="test2.jpg" /&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- <span class="comment">// HTML 代码: --&gt;</span></span><br><span class="line">&lt;img/&gt;<span class="xml"><span class="tag">&lt;<span class="name">img</span>/&gt;</span></span><span class="xml"><span class="tag">&lt;<span class="name">img</span>/&gt;</span></span></span><br><span class="line">&lt;!-- <span class="comment">// jQuery 代码: --&gt;</span></span><br><span class="line">$(<span class="string">"img"</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123;</span><br><span class="line">   <span class="keyword">this</span>.src = <span class="string">"test"</span> + i + <span class="string">".jpg"</span>; <span class="comment">// this指向调用着。（原生的dom对象）</span></span><br><span class="line"> &#125;);</span><br><span class="line">&lt;!-- <span class="comment">// 结果： --&gt;</span></span><br><span class="line">&lt;img src=<span class="string">"test0.jpg"</span> /&gt;&lt;img src="test1.jpg" /&gt;&lt;img src="test2.jpg" /&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>data([key],[value])</code> : 在一个div上存取数据。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- <span class="comment">//	HTML 代码: --&gt;</span></span><br><span class="line">&lt;div data-index=<span class="string">"ye_cs"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;!-- <span class="comment">// jQuery 代码: --&gt;</span></span><br><span class="line">$(<span class="string">"div"</span>).data(<span class="string">"index"</span>);  <span class="comment">// ye_cs</span></span><br><span class="line">$(<span class="string">"div"</span>).data(<span class="string">"str"</span>, <span class="string">"hello world"</span>);  <span class="comment">// blah设置为hello</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- <span class="comment">//	HTML 代码: --&gt;</span></span><br><span class="line">&lt;div data-index=<span class="string">"ye_cs"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;!-- <span class="comment">// jQuery 代码: --&gt;</span></span><br><span class="line">$(<span class="string">"div"</span>).data(<span class="string">"index"</span>);  <span class="comment">// ye_cs</span></span><br><span class="line">$(<span class="string">"div"</span>).data(<span class="string">"str"</span>, <span class="string">"hello world"</span>);  <span class="comment">// blah设置为hello</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>jQuery.each(object, [callback])</code> ： 遍历对象。<br> 使用方式同1。</p>
 </li>
@@ -565,11 +565,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/common/" rel="tag"><i class="fa fa-tag"></i>  common</a>
-          
             <a href="/tags/function/" rel="tag"><i class="fa fa-tag"></i>  function</a>
           
             <a href="/tags/jquery/" rel="tag"><i class="fa fa-tag"></i>  jquery</a>
+          
+            <a href="/tags/common/" rel="tag"><i class="fa fa-tag"></i>  common</a>
           
         </div>
       
@@ -679,7 +679,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
