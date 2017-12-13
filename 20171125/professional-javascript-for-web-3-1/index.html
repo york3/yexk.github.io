@@ -103,7 +103,7 @@
 <meta property="og:description" content="JavaScript高级程序设计第三版（读后感）（第一篇） 《JavaScript高级程序设计第三版》nichoals C.Zakes 著。此书2012年出版。囊括了基本概念、语言核心、面向对象、BOM、DOM、事件模型、Canvas、…。还引用了当时的刚刚发布不久的html5、ECMAScript 5。  概览本书囊括了25章节。附录4篇。可以算的上是一本权威指南书了。包含了JavaScript">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ym125.cc/20171125/professional-javascript-for-web-3-1/1-1.png">
-<meta property="og:updated_time" content="2017-11-25T06:00:17.915Z">
+<meta property="og:updated_time" content="2017-12-10T13:45:43.585Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript高级程序设计第三版（读后感）（第一篇）">
 <meta name="twitter:description" content="JavaScript高级程序设计第三版（读后感）（第一篇） 《JavaScript高级程序设计第三版》nichoals C.Zakes 著。此书2012年出版。囊括了基本概念、语言核心、面向对象、BOM、DOM、事件模型、Canvas、…。还引用了当时的刚刚发布不久的html5、ECMAScript 5。  概览本书囊括了25章节。附录4篇。可以算的上是一本权威指南书了。包含了JavaScript">
@@ -445,13 +445,13 @@
 </blockquote>
 <p>它规定了这门语言的下列组成部分：</p>
 <ol>
-<li>语法。</li>
-<li>类型</li>
-<li>语句</li>
-<li>关键字</li>
-<li>保留字</li>
-<li>操作符</li>
-<li>对象</li>
+<li>语法（解析规则，关键字，流程控制，对象初始化等）</li>
+<li>错误处理机制（throw， try/catch 以及用户自定义错误类型的能力）</li>
+<li>类型（布尔值，数字，字符串，函数，对象等）</li>
+<li>全局对象。在浏览器环境中，这个全局对象就是 window 对象，但是 ECMAScript 只定义与浏览器无关的 APIs（例如，parseInt， parseFloat， decodeURI， encodeURI 等）</li>
+<li>基于原型的继承机制</li>
+<li>内置对象和函数（JSON，Math，Array.prototype 方法，Object introspection 方法等）</li>
+<li>严格模式</li>
 </ol>
 <h3 id="DOM-（文档对象模型）"><a href="#DOM-（文档对象模型）" class="headerlink" title="DOM （文档对象模型）"></a>DOM （文档对象模型）</h3><p>根据书中的描述和我的所识。主要制定了对文档的操作接口。实现了控制文档显示数据。按照我们的意愿去加载所需要的内容。<br>目前dom提供了三种等级。由于市场的发展。其实很少人会注意到这些区别。毕竟这些功能对于目前市面上的浏览器来说都是已经支持的了。</p>
 <ol>
@@ -471,8 +471,9 @@
 <li>像 <code>XMLHttpRequest</code> 和 <code>ActiveXObject</code> 对象的支持。</li>
 </ol>
 <blockquote>
-<p>由于浏览器厂商的不一样。导致的这些对象的属性和方法有少许的不一样。</p>
+<p>由于浏览器厂商的不一样。导致的这些对象的属性和方法有少许的不一样。<br>截止2014年8月份，主流浏览器的最新版本都已经支持 <code>ECMAScript 5.1</code> ，但是旧版本的浏览器大都仅支持 <code>ECMAScript 3</code> 和 <code>ECMAScript 5</code> 的部分标准。<a href="http://kangax.github.io/compat-table/non-standard/" target="_blank" rel="noopener">这里</a>是一些关于 <code>ECMAScript 5</code> 的浏览器支持情况的资料。如今，主流浏览器的最新版本已经支持 <code>ECMAScript 6</code> 的大部分标准。</p>
 </blockquote>
+<h3 id="未来"><a href="#未来" class="headerlink" title="未来"></a>未来</h3><p>ECMA-262（ECMAScript 4 或者 ES4）第4版的提议本应成为自1999年第3版发布以来的一次重要更新，但是在2008年8月份，ECMAScript第4版被回退到一个代号为ECMAScript Harmony的项目，像const关键字以及对象代理等内容都被涵盖其中。你可以在这里跟踪这个项目的进展。ECMA 委员会已经在 2015年6月17号，正式发布了第6版标准。</p>
 <h1 id="读后感"><a href="#读后感" class="headerlink" title="读后感"></a>读后感</h1><p>认识 <code>JavaScript</code> 和 <code>EMCAScript</code> 的区别认识。前者基于后者提供的语法和基础的支持构建了一门脚步本语言。<br>浏览器产生差异性的原因是各大浏览器想争夺这个蛋糕导致的三足鼎立的情况。导致的我们开发者的复杂程度。虽然后续的 <code>HTML5</code> 有望统一，但需要完全统一需要一定的时间。</p>
 
       
@@ -601,7 +602,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -696,7 +697,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript高级程序设计第三版（读后感）（第一篇）"><span class="nav-number">1.</span> <span class="nav-text">JavaScript高级程序设计第三版（读后感）（第一篇）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#概览"><span class="nav-number">2.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章：JavaScript简介"><span class="nav-number">3.</span> <span class="nav-text">第一章：JavaScript简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript简史"><span class="nav-number">3.1.</span> <span class="nav-text">JavaScript简史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本"><span class="nav-number">3.2.</span> <span class="nav-text">版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript和ECMAScript"><span class="nav-number">3.3.</span> <span class="nav-text">JavaScript和ECMAScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript实现"><span class="nav-number">3.4.</span> <span class="nav-text">JavaScript实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ECMAScript"><span class="nav-number">3.4.1.</span> <span class="nav-text">ECMAScript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM-（文档对象模型）"><span class="nav-number">3.4.2.</span> <span class="nav-text">DOM （文档对象模型）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BOM-（浏览器对象模型）"><span class="nav-number">3.4.3.</span> <span class="nav-text">BOM （浏览器对象模型）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#读后感"><span class="nav-number">4.</span> <span class="nav-text">读后感</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript高级程序设计第三版（读后感）（第一篇）"><span class="nav-number">1.</span> <span class="nav-text">JavaScript高级程序设计第三版（读后感）（第一篇）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#概览"><span class="nav-number">2.</span> <span class="nav-text">概览</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章：JavaScript简介"><span class="nav-number">3.</span> <span class="nav-text">第一章：JavaScript简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript简史"><span class="nav-number">3.1.</span> <span class="nav-text">JavaScript简史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本"><span class="nav-number">3.2.</span> <span class="nav-text">版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript和ECMAScript"><span class="nav-number">3.3.</span> <span class="nav-text">JavaScript和ECMAScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript实现"><span class="nav-number">3.4.</span> <span class="nav-text">JavaScript实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ECMAScript"><span class="nav-number">3.4.1.</span> <span class="nav-text">ECMAScript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM-（文档对象模型）"><span class="nav-number">3.4.2.</span> <span class="nav-text">DOM （文档对象模型）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BOM-（浏览器对象模型）"><span class="nav-number">3.4.3.</span> <span class="nav-text">BOM （浏览器对象模型）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#未来"><span class="nav-number">3.4.4.</span> <span class="nav-text">未来</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#读后感"><span class="nav-number">4.</span> <span class="nav-text">读后感</span></a></li></ol></div>
             
 
           </div>

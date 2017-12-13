@@ -3,6 +3,114 @@
   
     
     <entry>
+      <title><![CDATA[JavaScript高级程序设计第三版（读后感）（第三篇）]]></title>
+      <url>/20171210/professional-javascript-for-web-3-3/</url>
+      <content type="html"><![CDATA[<h1 id="JavaScript高级程序设计第三版（读后感）（第三篇）"><a href="#JavaScript高级程序设计第三版（读后感）（第三篇）" class="headerlink" title="JavaScript高级程序设计第三版（读后感）（第三篇）"></a>JavaScript高级程序设计第三版（读后感）（第三篇）</h1><blockquote>
+<p>在上一篇中，讲了JavaScript的使用方式（引用方式）。总得来说无非就是 <code>script</code> 标签和脚本的引用。接下来继续读第三章，这一章开始讲述了 <code>JavaScript</code> 基础语法，这个还好，<code>JavaScript</code> 是一个弱类型的语言。借鉴的 <code>Java</code> 和 <code>c</code> 等高级语言的语法。使得其他编程语言上手也不算有难度。  </p>
+</blockquote>
+<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><p>和众多编程一样，有 <code>区分大小写</code> 、<code>关键字</code> 、 <code>标识符</code> 等规则。但和 <code>Java</code> 、<code>C</code> 不一样的是这门语言没有那么严格的变量类型。也就意味着一个变量可以存放任何东西，这点和 <code>PHP</code> 类似，</p>
+<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><ul>
+<li>第一个字符必须是一个<code>字母</code>、<code>下划线（_）</code>或者一个<code>美元符号（$）</code>;</li>
+<li>其他字符可以是<code>字母</code>、<code>下划线</code>、<code>美元符号</code>或者<code>数字</code>。</li>
+<li>标识符的字母也可以包含扩展的 <code>ASCII</code> 或 <code>Unicode</code> 字母字符。</li>
+</ul>
+<blockquote>
+<p>按照惯例，<code>ECMAScript</code> 标识符采用<code>小驼峰</code>的命名方式。也推荐其标识符的时候使用<code>小驼峰</code>的形式。</p>
+</blockquote>
+<h2 id="数据类型（7种）"><a href="#数据类型（7种）" class="headerlink" title="数据类型（7种）"></a>数据类型（7种）</h2><p>JavaScript语言可以识别下面 7 种不同类型的值：</p>
+<p>六种 <code>原型</code> 数据类型:</p>
+<ul>
+<li><code>Boolean</code> .  布尔值，<code>true</code> 和 <code>false</code>.</li>
+<li><code>null</code> . 一个表明 <code>null</code> 值的特殊关键字。 <code>JavaScript</code> 是大小写敏感的，因此 <code>null</code> 与 <code>Null</code>、<code>NULL</code>或其他变量完全不同。</li>
+<li><code>undefined</code> .  变量未定义时的属性。</li>
+<li><code>Number</code> .  表示数字，例如： <code>42</code> 或者 <code>3.14159</code>。</li>
+<li><code>String</code> .  表示字符串，例如：<code>&quot;Howdy&quot;</code></li>
+<li><code>Symbol</code> . ( 在 <code>ECMAScript 6</code> 中新添加的类型)。一种数据类型，它的实例是唯一且不可改变的。</li>
+</ul>
+<p>以及 <code>Object</code> 对象。</p>
+<h2 id="操作符（运算符）"><a href="#操作符（运算符）" class="headerlink" title="操作符（运算符）"></a>操作符（运算符）</h2><p>JavaScript 拥有如下类型的运算符。书中详细的描述了运算符和运算符的优先级。</p>
+<ul>
+<li>赋值运算符(Assignment operators)</li>
+<li>比较运算符(Comparison operators)</li>
+<li>算数运算符(Arithmetic operators)</li>
+<li>位运算符(Bitwise operators)</li>
+<li>逻辑运算符(Logical operators)</li>
+<li>字符串运算符(String operators)</li>
+<li>条件（三元）运算符(Conditional operator)</li>
+<li>逗号运算符(Comma operator)</li>
+<li>一元运算符(Unary operators)</li>
+<li>关系运算符(Relational operator)</li>
+</ul>
+<p>其他的运算符合别的语言都没有很大的区别。这里笔者想提一下 <code>一元运算符(Unary operators)</code> ，这个算是 <code>JavaScript</code> 语言中比较独特的语法。书中没有提到的，笔者这里做点补充：  </p>
+<h3 id="一元运算符-Unary-operators"><a href="#一元运算符-Unary-operators" class="headerlink" title="一元运算符(Unary operators)"></a>一元运算符(Unary operators)</h3><blockquote>
+<p>除去自增自减是一元运算符以为，JavaScript还提供了下面的几种一元运算符。</p>
+</blockquote>
+<ul>
+<li>typeof <blockquote>
+<p><code>typeof</code> 运算符返回一个表示 <code>xxx</code> 类型的字符串值。<code>xxx</code> 可为字符串、变量、关键词或对象，其类型将被返回。</p>
+</blockquote>
+</li>
+<li>delete<blockquote>
+<p><code>delete</code> 运算符, 删除一个对象或一个对象的属性或者一个数组中某一个键值。</p>
+</blockquote>
+</li>
+<li>vold<blockquote>
+<p><code>void</code> 运算符,表明一个运算没有返回值。    </p>
+</blockquote>
+</li>
+</ul>
+<p><strong>typeof 运算符</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> operand</span><br><span class="line"><span class="keyword">typeof</span> (operand)</span><br></pre></td></tr></table></figure></p>
+<p><code>typeof</code> 操作符返回一个表示 <code>operand</code> 类型的字符串值。 <code>operand</code> 可为字符串、变量、关键词或对象，其类型将被返回。 <code>operand</code> 两侧的括号为可选。<br>案例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myFun = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">"5 + 2"</span>);</span><br><span class="line"><span class="keyword">var</span> shape = <span class="string">"round"</span>;</span><br><span class="line"><span class="keyword">var</span> size = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> myFun;     <span class="comment">// return "function"</span></span><br><span class="line"><span class="keyword">typeof</span> shape;     <span class="comment">// return "string"</span></span><br><span class="line"><span class="keyword">typeof</span> size;      <span class="comment">// return "number"</span></span><br><span class="line"><span class="keyword">typeof</span> today;     <span class="comment">// return "object"</span></span><br><span class="line"><span class="keyword">typeof</span> dontExist; <span class="comment">// return "undefined"</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><code>typeof</code> 常用于数据类型的判断。通过类型结果继续下一步操作。 </p>
+</blockquote>
+<p><strong>delete 运算符</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> objectName;</span><br><span class="line"><span class="keyword">delete</span> objectName.property;</span><br><span class="line"><span class="keyword">delete</span> objectName[index];</span><br></pre></td></tr></table></figure></p>
+<p><code>objectName</code> 是一个对象名, <code>property</code> 是一个已经存在的属性, <code>index</code> 是数组中的一个已经存在的键值的索引值.</p>
+<blockquote>
+<p>不推荐使用，并在ECMAScript中5严格模式是被禁止的。推荐的替代方案是分配要访问到一个临时变量，其属性的对象。<br>删除数组中的元素时，数组的长度是不变的，例如 delete a[3], a[4]  ，a[4] 和a[3] 仍然存在变成了undefined.</p>
+</blockquote>
+<p><strong>vold 运算符</strong><br>这个在c语言和java中都可以看到。都是代表函数声明没有返回值的时候。在JavaScript也差不多是这个情况。大家一定看过这个情况：<code>&lt;a href=&quot;javascript:void(0)&quot;&gt;click here . Yexk&lt;/a&gt;</code> 这个汉代么点击的时候不会发生任何效果。</p>
+<h2 id="语句（流程控制语句）"><a href="#语句（流程控制语句）" class="headerlink" title="语句（流程控制语句）"></a>语句（流程控制语句）</h2><p>流程控制语句是编程领域一个很重要的语法，语句通常使用一个或者多个关键字来完成指定的任务。这个很多语言上都差不多。</p>
+<ul>
+<li>if</li>
+<li>do-while</li>
+<li>while</li>
+<li>for </li>
+<li>forin </li>
+<li>label</li>
+<li>switch</li>
+</ul>
+<p>书中的语法相对比较详细。笔者想提及一个同样用于遍历的方法 <code>forEach</code> : 对数组的每个元素执行一次提供的函数。  </p>
+<p><strong>语法：</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">array.forEach(callback(currentValue, index, array)&#123;</span><br><span class="line">    <span class="comment">//do something</span></span><br><span class="line">&#125;, <span class="keyword">this</span>)</span><br><span class="line"></span><br><span class="line">array.forEach(callback[, thisArg])</span><br></pre></td></tr></table></figure></p>
+<p><strong>参数</strong><br>callback:为数组中每个元素执行的函数，该函数接收三个参数：<br>currentValue(当前值):数组中正在处理的当前元素。<br>index(索引):数组中正在处理的当前元素的索引。<br>array:forEach()方法正在操作的数组。<br>[thisArg]可选:可选参数。当执行回调 函数时用作this的值(参考对象)。<br><strong>返回值</strong><br>undefined.<br><strong>支持情况</strong><br>主流浏览器和IE9+   </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>];</span><br><span class="line">arr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(element);</span><br><span class="line">&#125;);</span><br><span class="line">arr.forEach( <span class="function"><span class="params">element</span> =&gt;</span> <span class="built_in">console</span>.log(element));</span><br><span class="line"></span><br><span class="line"><span class="comment">// a</span></span><br><span class="line"><span class="comment">// b</span></span><br><span class="line"><span class="comment">// c</span></span><br></pre></td></tr></table></figure>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>函数对任何语言来说都一个核心的概念。通过函数可以封装任意多条语句，而且可以在任何地方、任何时候调用。 <code>JavaScript</code> 中的函数使用的更多的是匿名函数，后续会有专门的章节对函数进行讲述。可以看 <code>第7章函数表达式</code> </p>
+<p>在 ES6 中，函数新增了一个箭头函数，所谓是为开发者提供了一个便利。简介的语法，对 this 指向的修改。对我开发者还是很有用的。目前的市场上很多框架都在使用了。</p>
+<blockquote>
+<p>书中的函数在此章节也没有说的很详细。这里就简单的知道一下这个概念就行。</p>
+</blockquote>
+<h1 id="读后感"><a href="#读后感" class="headerlink" title="读后感"></a>读后感</h1><p>基础语法章节，考验编程的基本工扎不扎实的时候。很多开发者都是出问题了就一头雾水，包括笔者自己也一样。虽然在调试程序上有点心得，但有时候还是需要调试一段时间。<br>对于调试程序，笔者觉得看结果是最好的调试方法。问题出在哪里直接看控制台错误就行，对有疑问的数据或者业务逻辑有问题，多打印结果出来看看就好。一句话基本功好，都不是问题。</p>
+<blockquote>
+<p>调试心得：多看控制台，多用 <code>console.log(data)</code>。</p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> professional_javascript_for_web_develop_3rd </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> JavaScript-web-develop-3rd </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[JavaScript高级程序设计第三版（读后感）（第二篇）]]></title>
       <url>/20171203/professional-javascript-for-web-3-2/</url>
       <content type="html"><![CDATA[<h1 id="JavaScript高级程序设计第三版（读后感）（第二篇）"><a href="#JavaScript高级程序设计第三版（读后感）（第二篇）" class="headerlink" title="JavaScript高级程序设计第三版（读后感）（第二篇）"></a>JavaScript高级程序设计第三版（读后感）（第二篇）</h1><blockquote>
@@ -119,13 +227,13 @@
 </blockquote>
 <p>它规定了这门语言的下列组成部分：</p>
 <ol>
-<li>语法。</li>
-<li>类型</li>
-<li>语句</li>
-<li>关键字</li>
-<li>保留字</li>
-<li>操作符</li>
-<li>对象</li>
+<li>语法（解析规则，关键字，流程控制，对象初始化等）</li>
+<li>错误处理机制（throw， try/catch 以及用户自定义错误类型的能力）</li>
+<li>类型（布尔值，数字，字符串，函数，对象等）</li>
+<li>全局对象。在浏览器环境中，这个全局对象就是 window 对象，但是 ECMAScript 只定义与浏览器无关的 APIs（例如，parseInt， parseFloat， decodeURI， encodeURI 等）</li>
+<li>基于原型的继承机制</li>
+<li>内置对象和函数（JSON，Math，Array.prototype 方法，Object introspection 方法等）</li>
+<li>严格模式</li>
 </ol>
 <h3 id="DOM-（文档对象模型）"><a href="#DOM-（文档对象模型）" class="headerlink" title="DOM （文档对象模型）"></a>DOM （文档对象模型）</h3><p>根据书中的描述和我的所识。主要制定了对文档的操作接口。实现了控制文档显示数据。按照我们的意愿去加载所需要的内容。<br>目前dom提供了三种等级。由于市场的发展。其实很少人会注意到这些区别。毕竟这些功能对于目前市面上的浏览器来说都是已经支持的了。</p>
 <ol>
@@ -145,8 +253,9 @@
 <li>像 <code>XMLHttpRequest</code> 和 <code>ActiveXObject</code> 对象的支持。</li>
 </ol>
 <blockquote>
-<p>由于浏览器厂商的不一样。导致的这些对象的属性和方法有少许的不一样。</p>
+<p>由于浏览器厂商的不一样。导致的这些对象的属性和方法有少许的不一样。<br>截止2014年8月份，主流浏览器的最新版本都已经支持 <code>ECMAScript 5.1</code> ，但是旧版本的浏览器大都仅支持 <code>ECMAScript 3</code> 和 <code>ECMAScript 5</code> 的部分标准。<a href="http://kangax.github.io/compat-table/non-standard/" target="_blank" rel="noopener">这里</a>是一些关于 <code>ECMAScript 5</code> 的浏览器支持情况的资料。如今，主流浏览器的最新版本已经支持 <code>ECMAScript 6</code> 的大部分标准。</p>
 </blockquote>
+<h3 id="未来"><a href="#未来" class="headerlink" title="未来"></a>未来</h3><p>ECMA-262（ECMAScript 4 或者 ES4）第4版的提议本应成为自1999年第3版发布以来的一次重要更新，但是在2008年8月份，ECMAScript第4版被回退到一个代号为ECMAScript Harmony的项目，像const关键字以及对象代理等内容都被涵盖其中。你可以在这里跟踪这个项目的进展。ECMA 委员会已经在 2015年6月17号，正式发布了第6版标准。</p>
 <h1 id="读后感"><a href="#读后感" class="headerlink" title="读后感"></a>读后感</h1><p>认识 <code>JavaScript</code> 和 <code>EMCAScript</code> 的区别认识。前者基于后者提供的语法和基础的支持构建了一门脚步本语言。<br>浏览器产生差异性的原因是各大浏览器想争夺这个蛋糕导致的三足鼎立的情况。导致的我们开发者的复杂程度。虽然后续的 <code>HTML5</code> 有望统一，但需要完全统一需要一定的时间。</p>
 ]]></content>
       
@@ -758,9 +867,9 @@
             
             <tag> function </tag>
             
-            <tag> common </tag>
-            
             <tag> jquery </tag>
+            
+            <tag> common </tag>
             
         </tags>
         
